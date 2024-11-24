@@ -10,22 +10,26 @@ import UIKit
 extension UIFont {
     
     static func bold(size: CGFloat) -> UIFont {
-        .init(name: "Montserrat-Bold", size: size)!
+        .init(name: "InriaSans-Bold", size: size)!
     }
     
-    static func medium(size: CGFloat) -> UIFont {
-        .init(name: "Montserrat-Medium", size: size)!
+    static func lightItalic(size: CGFloat) -> UIFont {
+        .init(name: "InriaSans-LightItalic", size: size)!
     }
     
     static func regular(size: CGFloat) -> UIFont {
-        .init(name: "Montserrat-Regular", size: size)!
+        .init(name: "InriaSans-Regular", size: size)!
     }
     
-    static func semiBold(size: CGFloat) -> UIFont {
-        .init(name: "Montserrat-SemiBold", size: size)!
+    static func boldItalic(size: CGFloat) -> UIFont {
+        .init(name: "InriaSans-BoldItalic", size: size)!
     }
     
     static func light(size: CGFloat) -> UIFont {
-        .init(name: "Montserrat-Light", size: size)!
+        .init(name: "InriaSans-Light", size: size)!
+    }
+    
+    static func italic(size: CGFloat) -> UIFont {
+        .init(name: "InriaSans-Italic", size: size)!
     }
 }

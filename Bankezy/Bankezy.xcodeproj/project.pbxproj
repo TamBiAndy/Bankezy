@@ -21,6 +21,16 @@
 		A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B62CF38E6800A75DA3 /* Withable.swift */; };
 		A137F9C12CF38E6800A75DA3 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B72CF38E6800A75DA3 /* UIButton+Ext.swift */; };
 		A137F9C22CF38E6800A75DA3 /* String Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B82CF38E6800A75DA3 /* String Ext.swift */; };
+		A137F9C42CF38FD500A75DA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9C32CF38FD500A75DA3 /* TabBarController.swift */; };
+		A137F9CD2CF3932000A75DA3 /* InriaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9C62CF3932000A75DA3 /* InriaSans-Light.ttf */; };
+		A137F9CE2CF3932000A75DA3 /* InriaSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9C72CF3932000A75DA3 /* InriaSans-LightItalic.ttf */; };
+		A137F9CF2CF3932000A75DA3 /* InriaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9C82CF3932000A75DA3 /* InriaSans-Bold.ttf */; };
+		A137F9D02CF3932000A75DA3 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A137F9C92CF3932000A75DA3 /* OFL.txt */; };
+		A137F9D12CF3932000A75DA3 /* InriaSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9CA2CF3932000A75DA3 /* InriaSans-Italic.ttf */; };
+		A137F9D22CF3932000A75DA3 /* InriaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9CB2CF3932000A75DA3 /* InriaSans-BoldItalic.ttf */; };
+		A137F9D32CF3932000A75DA3 /* InriaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9CC2CF3932000A75DA3 /* InriaSans-Regular.ttf */; };
+		A137F9D62CF396C000A75DA3 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */; };
+		A137F9D72CF396C000A75DA3 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */; };
 		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +54,16 @@
 		A137F9B62CF38E6800A75DA3 /* Withable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
 		A137F9B72CF38E6800A75DA3 /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		A137F9B82CF38E6800A75DA3 /* String Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String Ext.swift"; sourceTree = "<group>"; };
+		A137F9C32CF38FD500A75DA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A137F9C62CF3932000A75DA3 /* InriaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-Light.ttf"; sourceTree = "<group>"; };
+		A137F9C72CF3932000A75DA3 /* InriaSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		A137F9C82CF3932000A75DA3 /* InriaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-Bold.ttf"; sourceTree = "<group>"; };
+		A137F9C92CF3932000A75DA3 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		A137F9CA2CF3932000A75DA3 /* InriaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-Italic.ttf"; sourceTree = "<group>"; };
+		A137F9CB2CF3932000A75DA3 /* InriaSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A137F9CC2CF3932000A75DA3 /* InriaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-Regular.ttf"; sourceTree = "<group>"; };
+		A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +84,6 @@
 				2332F9E6E205BB77DE6321B4 /* Pods-Bankezy.debug.xcconfig */,
 				3AE8F06D4D33BEDC9F87DBFD /* Pods-Bankezy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,7 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
+				A137F9C32CF38FD500A75DA3 /* TabBarController.swift */,
 				A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */,
+				A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */,
+				A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */,
+				A137F9C52CF392F200A75DA3 /* Fonts */,
 				A137F9AE2CF38DB900A75DA3 /* Helps */,
 				A137F9A12CF38CC900A75DA3 /* Assets.xcassets */,
 				A137F9A32CF38CC900A75DA3 /* LaunchScreen.storyboard */,
@@ -114,6 +137,20 @@
 				A137F9B62CF38E6800A75DA3 /* Withable.swift */,
 			);
 			path = Helps;
+			sourceTree = "<group>";
+		};
+		A137F9C52CF392F200A75DA3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A137F9C82CF3932000A75DA3 /* InriaSans-Bold.ttf */,
+				A137F9CB2CF3932000A75DA3 /* InriaSans-BoldItalic.ttf */,
+				A137F9CA2CF3932000A75DA3 /* InriaSans-Italic.ttf */,
+				A137F9C62CF3932000A75DA3 /* InriaSans-Light.ttf */,
+				A137F9C72CF3932000A75DA3 /* InriaSans-LightItalic.ttf */,
+				A137F9CC2CF3932000A75DA3 /* InriaSans-Regular.ttf */,
+				A137F9C92CF3932000A75DA3 /* OFL.txt */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		D16F85C9451A177F71ABB67F /* Frameworks */ = {
@@ -184,8 +221,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A137F9D22CF3932000A75DA3 /* InriaSans-BoldItalic.ttf in Resources */,
+				A137F9D32CF3932000A75DA3 /* InriaSans-Regular.ttf in Resources */,
+				A137F9D02CF3932000A75DA3 /* OFL.txt in Resources */,
+				A137F9CE2CF3932000A75DA3 /* InriaSans-LightItalic.ttf in Resources */,
+				A137F9CD2CF3932000A75DA3 /* InriaSans-Light.ttf in Resources */,
 				A137F9A52CF38CC900A75DA3 /* LaunchScreen.storyboard in Resources */,
+				A137F9CF2CF3932000A75DA3 /* InriaSans-Bold.ttf in Resources */,
 				A137F9A22CF38CC900A75DA3 /* Assets.xcassets in Resources */,
+				A137F9D12CF3932000A75DA3 /* InriaSans-Italic.ttf in Resources */,
+				A137F9D72CF396C000A75DA3 /* GetStartedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A137F9BD2CF38E6800A75DA3 /* UIColor+Ext.swift in Sources */,
+				A137F9C42CF38FD500A75DA3 /* TabBarController.swift in Sources */,
 				A137F9BA2CF38E6800A75DA3 /* UIView+Ext.swift in Sources */,
 				A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */,
 				A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */,
+				A137F9D62CF396C000A75DA3 /* GetStartedViewController.swift in Sources */,
 				A137F9BF2CF38E6800A75DA3 /* UIImageView+Ext.swift in Sources */,
 				A137F9BE2CF38E6800A75DA3 /* UIStackView+Ext.swift in Sources */,
 				A137F9B92CF38E6800A75DA3 /* UISearchBar+Ext.swift in Sources */,
@@ -395,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 26M3H74736;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bankezy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -423,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 26M3H74736;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bankezy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
