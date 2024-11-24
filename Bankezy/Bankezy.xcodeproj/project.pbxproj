@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9982CF38CC800A75DA3 /* AppDelegate.swift */; };
+		A137F9A22CF38CC900A75DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A137F9A12CF38CC900A75DA3 /* Assets.xcassets */; };
+		A137F9A52CF38CC900A75DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A137F9A32CF38CC900A75DA3 /* LaunchScreen.storyboard */; };
+		A137F9AD2CF38D7500A75DA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */; };
+		A137F9B92CF38E6800A75DA3 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9AF2CF38E6700A75DA3 /* UISearchBar+Ext.swift */; };
+		A137F9BA2CF38E6800A75DA3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B02CF38E6800A75DA3 /* UIView+Ext.swift */; };
+		A137F9BB2CF38E6800A75DA3 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B12CF38E6800A75DA3 /* UIFont+Ext.swift */; };
+		A137F9BC2CF38E6800A75DA3 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B22CF38E6800A75DA3 /* NavigationBar.swift */; };
+		A137F9BD2CF38E6800A75DA3 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B32CF38E6800A75DA3 /* UIColor+Ext.swift */; };
+		A137F9BE2CF38E6800A75DA3 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B42CF38E6800A75DA3 /* UIStackView+Ext.swift */; };
+		A137F9BF2CF38E6800A75DA3 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B52CF38E6800A75DA3 /* UIImageView+Ext.swift */; };
+		A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B62CF38E6800A75DA3 /* Withable.swift */; };
+		A137F9C12CF38E6800A75DA3 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B72CF38E6800A75DA3 /* UIButton+Ext.swift */; };
+		A137F9C22CF38E6800A75DA3 /* String Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B82CF38E6800A75DA3 /* String Ext.swift */; };
+		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2332F9E6E205BB77DE6321B4 /* Pods-Bankezy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bankezy.debug.xcconfig"; path = "Target Support Files/Pods-Bankezy/Pods-Bankezy.debug.xcconfig"; sourceTree = "<group>"; };
+		33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bankezy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE8F06D4D33BEDC9F87DBFD /* Pods-Bankezy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bankezy.release.xcconfig"; path = "Target Support Files/Pods-Bankezy/Pods-Bankezy.release.xcconfig"; sourceTree = "<group>"; };
+		A137F9952CF38CC800A75DA3 /* Bankezy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankezy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A137F9982CF38CC800A75DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A137F9A12CF38CC900A75DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A137F9A42CF38CC900A75DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A137F9A62CF38CC900A75DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A137F9AF2CF38E6700A75DA3 /* UISearchBar+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B02CF38E6800A75DA3 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B12CF38E6800A75DA3 /* UIFont+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B22CF38E6800A75DA3 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		A137F9B32CF38E6800A75DA3 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B42CF38E6800A75DA3 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B52CF38E6800A75DA3 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B62CF38E6800A75DA3 /* Withable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
+		A137F9B72CF38E6800A75DA3 /* UIButton+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		A137F9B82CF38E6800A75DA3 /* String Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String Ext.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A137F9922CF38CC800A75DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E7C3976BD4CA3C306B908C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2332F9E6E205BB77DE6321B4 /* Pods-Bankezy.debug.xcconfig */,
+				3AE8F06D4D33BEDC9F87DBFD /* Pods-Bankezy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A137F98C2CF38CC800A75DA3 = {
+			isa = PBXGroup;
+			children = (
+				A137F9972CF38CC800A75DA3 /* Bankezy */,
+				A137F9962CF38CC800A75DA3 /* Products */,
+				1E7C3976BD4CA3C306B908C3 /* Pods */,
+				D16F85C9451A177F71ABB67F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A137F9962CF38CC800A75DA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A137F9952CF38CC800A75DA3 /* Bankezy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A137F9972CF38CC800A75DA3 /* Bankezy */ = {
+			isa = PBXGroup;
+			children = (
+				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
+				A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */,
+				A137F9AE2CF38DB900A75DA3 /* Helps */,
+				A137F9A12CF38CC900A75DA3 /* Assets.xcassets */,
+				A137F9A32CF38CC900A75DA3 /* LaunchScreen.storyboard */,
+				A137F9A62CF38CC900A75DA3 /* Info.plist */,
+			);
+			path = Bankezy;
+			sourceTree = "<group>";
+		};
+		A137F9AE2CF38DB900A75DA3 /* Helps */ = {
+			isa = PBXGroup;
+			children = (
+				A137F9B22CF38E6800A75DA3 /* NavigationBar.swift */,
+				A137F9B82CF38E6800A75DA3 /* String Ext.swift */,
+				A137F9B72CF38E6800A75DA3 /* UIButton+Ext.swift */,
+				A137F9B32CF38E6800A75DA3 /* UIColor+Ext.swift */,
+				A137F9B12CF38E6800A75DA3 /* UIFont+Ext.swift */,
+				A137F9B52CF38E6800A75DA3 /* UIImageView+Ext.swift */,
+				A137F9AF2CF38E6700A75DA3 /* UISearchBar+Ext.swift */,
+				A137F9B42CF38E6800A75DA3 /* UIStackView+Ext.swift */,
+				A137F9B02CF38E6800A75DA3 /* UIView+Ext.swift */,
+				A137F9B62CF38E6800A75DA3 /* Withable.swift */,
+			);
+			path = Helps;
+			sourceTree = "<group>";
+		};
+		D16F85C9451A177F71ABB67F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A137F9942CF38CC800A75DA3 /* Bankezy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A137F9A92CF38CC900A75DA3 /* Build configuration list for PBXNativeTarget "Bankezy" */;
+			buildPhases = (
+				3CD07CFD0602419130445C34 /* [CP] Check Pods Manifest.lock */,
+				A137F9912CF38CC800A75DA3 /* Sources */,
+				A137F9922CF38CC800A75DA3 /* Frameworks */,
+				A137F9932CF38CC800A75DA3 /* Resources */,
+				79CDED45FD048F0DB2692F25 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bankezy;
+			productName = Bankezy;
+			productReference = A137F9952CF38CC800A75DA3 /* Bankezy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A137F98D2CF38CC800A75DA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					A137F9942CF38CC800A75DA3 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = A137F9902CF38CC800A75DA3 /* Build configuration list for PBXProject "Bankezy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A137F98C2CF38CC800A75DA3;
+			productRefGroup = A137F9962CF38CC800A75DA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A137F9942CF38CC800A75DA3 /* Bankezy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A137F9932CF38CC800A75DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A137F9A52CF38CC900A75DA3 /* LaunchScreen.storyboard in Resources */,
+				A137F9A22CF38CC900A75DA3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CD07CFD0602419130445C34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bankezy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79CDED45FD048F0DB2692F25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bankezy/Pods-Bankezy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bankezy/Pods-Bankezy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bankezy/Pods-Bankezy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A137F9912CF38CC800A75DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A137F9BD2CF38E6800A75DA3 /* UIColor+Ext.swift in Sources */,
+				A137F9BA2CF38E6800A75DA3 /* UIView+Ext.swift in Sources */,
+				A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */,
+				A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */,
+				A137F9BF2CF38E6800A75DA3 /* UIImageView+Ext.swift in Sources */,
+				A137F9BE2CF38E6800A75DA3 /* UIStackView+Ext.swift in Sources */,
+				A137F9B92CF38E6800A75DA3 /* UISearchBar+Ext.swift in Sources */,
+				A137F9C22CF38E6800A75DA3 /* String Ext.swift in Sources */,
+				A137F9AD2CF38D7500A75DA3 /* HomeViewController.swift in Sources */,
+				A137F9BB2CF38E6800A75DA3 /* UIFont+Ext.swift in Sources */,
+				A137F9C12CF38E6800A75DA3 /* UIButton+Ext.swift in Sources */,
+				A137F9BC2CF38E6800A75DA3 /* NavigationBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A137F9A32CF38CC900A75DA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A137F9A42CF38CC900A75DA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A137F9A72CF38CC900A75DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A137F9A82CF38CC900A75DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A137F9AA2CF38CC900A75DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332F9E6E205BB77DE6321B4 /* Pods-Bankezy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26M3H74736;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bankezy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.vision.pro.exp.Bankezy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A137F9AB2CF38CC900A75DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE8F06D4D33BEDC9F87DBFD /* Pods-Bankezy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26M3H74736;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bankezy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.vision.pro.exp.Bankezy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A137F9902CF38CC800A75DA3 /* Build configuration list for PBXProject "Bankezy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A137F9A72CF38CC900A75DA3 /* Debug */,
+				A137F9A82CF38CC900A75DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A137F9A92CF38CC900A75DA3 /* Build configuration list for PBXNativeTarget "Bankezy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A137F9AA2CF38CC900A75DA3 /* Debug */,
+				A137F9AB2CF38CC900A75DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A137F98D2CF38CC800A75DA3 /* Project object */;
+}

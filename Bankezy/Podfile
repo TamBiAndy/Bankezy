@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+target 'Bankezy' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Bankezy
+
+  pod 'Kingfisher', '~> 7.0'
+  pod 'SnapKit', '~> 5.7.0'
+  pod 'Moya/RxSwift', '~> 15.0'
+  pod 'ProgressHUD'
+  pod 'Cosmos', '~> 25.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxGesture'
+  pod 'RxSwiftExt'
+  pod 'NSObject+Rx'
+
+end
