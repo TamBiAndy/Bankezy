@@ -10,7 +10,6 @@
 		A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9982CF38CC800A75DA3 /* AppDelegate.swift */; };
 		A137F9A22CF38CC900A75DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A137F9A12CF38CC900A75DA3 /* Assets.xcassets */; };
 		A137F9A52CF38CC900A75DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A137F9A32CF38CC900A75DA3 /* LaunchScreen.storyboard */; };
-		A137F9AD2CF38D7500A75DA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */; };
 		A137F9B92CF38E6800A75DA3 /* UISearchBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9AF2CF38E6700A75DA3 /* UISearchBar+Ext.swift */; };
 		A137F9BA2CF38E6800A75DA3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B02CF38E6800A75DA3 /* UIView+Ext.swift */; };
 		A137F9BB2CF38E6800A75DA3 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9B12CF38E6800A75DA3 /* UIFont+Ext.swift */; };
@@ -31,6 +30,19 @@
 		A137F9D32CF3932000A75DA3 /* InriaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137F9CC2CF3932000A75DA3 /* InriaSans-Regular.ttf */; };
 		A137F9D62CF396C000A75DA3 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */; };
 		A137F9D72CF396C000A75DA3 /* GetStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */; };
+		A137F9DA2CF5929300A75DA3 /* CreatAccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9D82CF5929300A75DA3 /* CreatAccViewController.swift */; };
+		A137F9DB2CF5929300A75DA3 /* CreatAccViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137F9D92CF5929300A75DA3 /* CreatAccViewController.xib */; };
+		A137F9DE2CF593A000A75DA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9DC2CF593A000A75DA3 /* LoginViewController.swift */; };
+		A137F9DF2CF593A000A75DA3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137F9DD2CF593A000A75DA3 /* LoginViewController.xib */; };
+		A137F9E12CF59B1F00A75DA3 /* ExtUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9E02CF59B1F00A75DA3 /* ExtUI.swift */; };
+		A137F9E52CF5C09300A75DA3 /* CreattAccViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9E42CF5C09300A75DA3 /* CreattAccViewModel.swift */; };
+		A137F9E72CF5C32E00A75DA3 /* creatAcc.json in Resources */ = {isa = PBXBuildFile; fileRef = A137F9E62CF5C32E00A75DA3 /* creatAcc.json */; };
+		A137F9E92CF5C38100A75DA3 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9E82CF5C38100A75DA3 /* APITarget.swift */; };
+		A137F9EB2CF6E84000A75DA3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9EA2CF6E84000A75DA3 /* LoginViewModel.swift */; };
+		A137F9ED2CF6F6A200A75DA3 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = A137F9EC2CF6F6A200A75DA3 /* login.json */; };
+		A137F9EF2CF781BB00A75DA3 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9EE2CF781BB00A75DA3 /* ErrorTracker.swift */; };
+		A137F9F22CF82D9D00A75DA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137F9F02CF82D9D00A75DA3 /* HomeViewController.swift */; };
+		A137F9F32CF82D9D00A75DA3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A137F9F12CF82D9D00A75DA3 /* HomeViewController.xib */; };
 		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +55,6 @@
 		A137F9A12CF38CC900A75DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A137F9A42CF38CC900A75DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A137F9A62CF38CC900A75DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A137F9AF2CF38E6700A75DA3 /* UISearchBar+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Ext.swift"; sourceTree = "<group>"; };
 		A137F9B02CF38E6800A75DA3 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		A137F9B12CF38E6800A75DA3 /* UIFont+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
@@ -64,6 +75,19 @@
 		A137F9CC2CF3932000A75DA3 /* InriaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSans-Regular.ttf"; sourceTree = "<group>"; };
 		A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetStartedViewController.xib; sourceTree = "<group>"; };
+		A137F9D82CF5929300A75DA3 /* CreatAccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatAccViewController.swift; sourceTree = "<group>"; };
+		A137F9D92CF5929300A75DA3 /* CreatAccViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatAccViewController.xib; sourceTree = "<group>"; };
+		A137F9DC2CF593A000A75DA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A137F9DD2CF593A000A75DA3 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A137F9E02CF59B1F00A75DA3 /* ExtUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUI.swift; sourceTree = "<group>"; };
+		A137F9E42CF5C09300A75DA3 /* CreattAccViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreattAccViewModel.swift; sourceTree = "<group>"; };
+		A137F9E62CF5C32E00A75DA3 /* creatAcc.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = creatAcc.json; sourceTree = "<group>"; };
+		A137F9E82CF5C38100A75DA3 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		A137F9EA2CF6E84000A75DA3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A137F9EC2CF6F6A200A75DA3 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		A137F9EE2CF781BB00A75DA3 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		A137F9F02CF82D9D00A75DA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A137F9F12CF82D9D00A75DA3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +132,13 @@
 		A137F9972CF38CC800A75DA3 /* Bankezy */ = {
 			isa = PBXGroup;
 			children = (
+				A137F9E62CF5C32E00A75DA3 /* creatAcc.json */,
+				A137F9EC2CF6F6A200A75DA3 /* login.json */,
 				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
 				A137F9C32CF38FD500A75DA3 /* TabBarController.swift */,
-				A137F9AC2CF38D7500A75DA3 /* HomeViewController.swift */,
-				A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */,
-				A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */,
+				A137F9F42CF82DBC00A75DA3 /* Login */,
+				A137F9F52CF82DCB00A75DA3 /* Home */,
+				A137F9E82CF5C38100A75DA3 /* APITarget.swift */,
 				A137F9C52CF392F200A75DA3 /* Fonts */,
 				A137F9AE2CF38DB900A75DA3 /* Helps */,
 				A137F9A12CF38CC900A75DA3 /* Assets.xcassets */,
@@ -135,6 +161,8 @@
 				A137F9B42CF38E6800A75DA3 /* UIStackView+Ext.swift */,
 				A137F9B02CF38E6800A75DA3 /* UIView+Ext.swift */,
 				A137F9B62CF38E6800A75DA3 /* Withable.swift */,
+				A137F9E02CF59B1F00A75DA3 /* ExtUI.swift */,
+				A137F9EE2CF781BB00A75DA3 /* ErrorTracker.swift */,
 			);
 			path = Helps;
 			sourceTree = "<group>";
@@ -151,6 +179,30 @@
 				A137F9C92CF3932000A75DA3 /* OFL.txt */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A137F9F42CF82DBC00A75DA3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A137F9D42CF396C000A75DA3 /* GetStartedViewController.swift */,
+				A137F9D52CF396C000A75DA3 /* GetStartedViewController.xib */,
+				A137F9D82CF5929300A75DA3 /* CreatAccViewController.swift */,
+				A137F9E42CF5C09300A75DA3 /* CreattAccViewModel.swift */,
+				A137F9D92CF5929300A75DA3 /* CreatAccViewController.xib */,
+				A137F9DC2CF593A000A75DA3 /* LoginViewController.swift */,
+				A137F9EA2CF6E84000A75DA3 /* LoginViewModel.swift */,
+				A137F9DD2CF593A000A75DA3 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A137F9F52CF82DCB00A75DA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A137F9F02CF82D9D00A75DA3 /* HomeViewController.swift */,
+				A137F9F12CF82D9D00A75DA3 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		D16F85C9451A177F71ABB67F /* Frameworks */ = {
@@ -223,13 +275,18 @@
 			files = (
 				A137F9D22CF3932000A75DA3 /* InriaSans-BoldItalic.ttf in Resources */,
 				A137F9D32CF3932000A75DA3 /* InriaSans-Regular.ttf in Resources */,
+				A137F9F32CF82D9D00A75DA3 /* HomeViewController.xib in Resources */,
+				A137F9DB2CF5929300A75DA3 /* CreatAccViewController.xib in Resources */,
+				A137F9E72CF5C32E00A75DA3 /* creatAcc.json in Resources */,
 				A137F9D02CF3932000A75DA3 /* OFL.txt in Resources */,
 				A137F9CE2CF3932000A75DA3 /* InriaSans-LightItalic.ttf in Resources */,
 				A137F9CD2CF3932000A75DA3 /* InriaSans-Light.ttf in Resources */,
 				A137F9A52CF38CC900A75DA3 /* LaunchScreen.storyboard in Resources */,
 				A137F9CF2CF3932000A75DA3 /* InriaSans-Bold.ttf in Resources */,
+				A137F9DF2CF593A000A75DA3 /* LoginViewController.xib in Resources */,
 				A137F9A22CF38CC900A75DA3 /* Assets.xcassets in Resources */,
 				A137F9D12CF3932000A75DA3 /* InriaSans-Italic.ttf in Resources */,
+				A137F9ED2CF6F6A200A75DA3 /* login.json in Resources */,
 				A137F9D72CF396C000A75DA3 /* GetStartedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,17 +343,24 @@
 				A137F9BD2CF38E6800A75DA3 /* UIColor+Ext.swift in Sources */,
 				A137F9C42CF38FD500A75DA3 /* TabBarController.swift in Sources */,
 				A137F9BA2CF38E6800A75DA3 /* UIView+Ext.swift in Sources */,
+				A137F9DE2CF593A000A75DA3 /* LoginViewController.swift in Sources */,
 				A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */,
+				A137F9F22CF82D9D00A75DA3 /* HomeViewController.swift in Sources */,
+				A137F9E92CF5C38100A75DA3 /* APITarget.swift in Sources */,
+				A137F9E12CF59B1F00A75DA3 /* ExtUI.swift in Sources */,
 				A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */,
 				A137F9D62CF396C000A75DA3 /* GetStartedViewController.swift in Sources */,
 				A137F9BF2CF38E6800A75DA3 /* UIImageView+Ext.swift in Sources */,
 				A137F9BE2CF38E6800A75DA3 /* UIStackView+Ext.swift in Sources */,
 				A137F9B92CF38E6800A75DA3 /* UISearchBar+Ext.swift in Sources */,
+				A137F9E52CF5C09300A75DA3 /* CreattAccViewModel.swift in Sources */,
 				A137F9C22CF38E6800A75DA3 /* String Ext.swift in Sources */,
-				A137F9AD2CF38D7500A75DA3 /* HomeViewController.swift in Sources */,
 				A137F9BB2CF38E6800A75DA3 /* UIFont+Ext.swift in Sources */,
 				A137F9C12CF38E6800A75DA3 /* UIButton+Ext.swift in Sources */,
+				A137F9DA2CF5929300A75DA3 /* CreatAccViewController.swift in Sources */,
+				A137F9EB2CF6E84000A75DA3 /* LoginViewModel.swift in Sources */,
 				A137F9BC2CF38E6800A75DA3 /* NavigationBar.swift in Sources */,
+				A137F9EF2CF781BB00A75DA3 /* ErrorTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

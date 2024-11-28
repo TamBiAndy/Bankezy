@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="InriaSans-Bold.ttf">
+            <string>InriaSans-Bold</string>
+        </array>
+        <array key="InriaSans-Regular.ttf">
+            <string>InriaSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Bankezy" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCheckbox" destination="xcK-7t-gNM" id="SJt-YL-zZZ"/>
+                <outlet property="btnCreatAcc" destination="AW3-tP-y1E" id="8Aw-MX-cvU"/>
+                <outlet property="btnLogin" destination="c7I-9t-swS" id="Et6-m6-7ZQ"/>
+                <outlet property="tfEmail" destination="R03-dW-khY" id="vEA-WT-Ljc"/>
+                <outlet property="tfPassword" destination="pW9-Hl-eG8" id="mx1-Bg-Qcy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hV-51-IhB">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW3-tP-y1E">
+                            <rect key="frame" x="249" y="30" width="106" height="32"/>
+                            <fontDescription key="fontDescription" name="InriaSans-Bold" family="Inria Sans" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Create account">
+                                <color key="titleColor" red="1" green="0.52156862745098043" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mvP-dI-OSU">
+                            <rect key="frame" x="38" y="136" width="317" height="140"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="R03-dW-khY">
+                                    <rect key="frame" x="0.0" y="0.0" width="317" height="60"/>
+                                    <color key="backgroundColor" red="0.078431372549019607" green="0.058823529411764705" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="TZ7-IN-6ec"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="InriaSans-Regular" family="Inria Sans" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pW9-Hl-eG8" userLabel="Password">
+                                    <rect key="frame" x="0.0" y="80" width="317" height="60"/>
+                                    <color key="backgroundColor" red="0.078431372550000003" green="0.058823529409999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="TdQ-CB-Dtf"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="InriaSans-Regular" family="Inria Sans" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-Kf-Juz">
+                            <rect key="frame" x="58" y="306" width="172" height="22"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcK-7t-gNM">
+                                    <rect key="frame" x="0.0" y="0.0" width="12" height="22"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="Rectangle 687"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto login next time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km0-5Y-aO2">
+                                    <rect key="frame" x="21" y="0.0" width="151" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7I-9t-swS">
+                            <rect key="frame" x="128.66666666666666" y="420" width="135.99999999999997" height="56"/>
+                            <color key="backgroundColor" red="0.13725490196078433" green="0.85098039215686272" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="Kpd-WZ-RcJ"/>
+                                <constraint firstAttribute="width" constant="136" id="YCy-pD-iYG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="InriaSans-Bold" family="Inria Sans" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Login" image="Arrow left">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.10980392156862745" green="0.086274509803921567" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="c7I-9t-swS" firstAttribute="centerX" secondItem="5hV-51-IhB" secondAttribute="centerX" id="12a-Eg-gIM"/>
+                        <constraint firstItem="mvP-dI-OSU" firstAttribute="leading" secondItem="5hV-51-IhB" secondAttribute="leading" constant="38" id="9l5-lE-pon"/>
+                        <constraint firstItem="c7I-9t-swS" firstAttribute="top" secondItem="lK0-Kf-Juz" secondAttribute="bottom" constant="92" id="Fjh-7q-TAY"/>
+                        <constraint firstItem="lK0-Kf-Juz" firstAttribute="top" secondItem="mvP-dI-OSU" secondAttribute="bottom" constant="30" id="JgA-SB-7Aq"/>
+                        <constraint firstAttribute="trailing" secondItem="AW3-tP-y1E" secondAttribute="trailing" constant="38" id="eIh-q8-uAH"/>
+                        <constraint firstItem="lK0-Kf-Juz" firstAttribute="leading" secondItem="5hV-51-IhB" secondAttribute="leading" constant="58" id="mbg-DX-JC2"/>
+                        <constraint firstAttribute="trailing" secondItem="mvP-dI-OSU" secondAttribute="trailing" constant="38" id="nGA-SD-O5s"/>
+                        <constraint firstItem="mvP-dI-OSU" firstAttribute="top" secondItem="AW3-tP-y1E" secondAttribute="bottom" constant="74" id="q8i-0g-jnj"/>
+                        <constraint firstItem="AW3-tP-y1E" firstAttribute="top" secondItem="5hV-51-IhB" secondAttribute="top" constant="30" id="rJR-cn-BoP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAJ-Ip-DtJ">
+                    <rect key="frame" x="38" y="89" width="39.333333333333343" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" name="InriaSans-Bold" family="Inria Sans" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SAJ-Ip-DtJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="HdJ-cX-BGH"/>
+                <constraint firstItem="5hV-51-IhB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O4Z-hX-CFJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5hV-51-IhB" secondAttribute="trailing" id="Vsm-sn-507"/>
+                <constraint firstAttribute="bottom" secondItem="5hV-51-IhB" secondAttribute="bottom" id="YGD-cK-u9l"/>
+                <constraint firstItem="SAJ-Ip-DtJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="qfK-Jm-16H"/>
+                <constraint firstItem="5hV-51-IhB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="trt-jm-dmJ"/>
+            </constraints>
+            <point key="canvasLocation" x="63" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Arrow left" width="29" height="33"/>
+        <image name="Rectangle 687" width="12" height="12"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
