@@ -1,0 +1,33 @@
+{
+  "id": "1234",
+  "partners": [
+    {
+      "id": "4",
+      "image": "https://images.pexels.com/photos/9213979/pexels-photo-9213979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "titleBrand": "Taco Bell",
+      "openStatus": "Open",
+      "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+      ],
+      "rating": 4.5,
+      "distance": 0.2,
+      "shippingFee": "Free shipping"
+    },
+    {
+        "id": "4",
+        "image": "https://images.pexels.com/photos/29614913/pexels-photo-29614913/free-photo-of-delicious-panini-with-french-fries-and-salad.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Subway",
+        "openStatus": "Open",
+        "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+        ],
+        "rating": 4.5,
+        "distance": 1.5,
+        "shippingFee": "Free shipping"
+    }
+  ]
+}

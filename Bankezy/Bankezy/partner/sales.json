@@ -1,0 +1,33 @@
+{
+  "id": "1234",
+  "partners": [
+    {
+      "id": "4",
+      "image": "https://images.pexels.com/photos/29616957/pexels-photo-29616957/free-photo-of-delicious-breakfast-pastry-with-kiwi-slices.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "titleBrand": "Subway",
+      "openStatus": "Open",
+      "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+      ],
+      "rating": 4.5,
+      "distance": 0.2,
+      "shippingFee": "Free shipping"
+    },
+    {
+        "id": "4",
+        "image": "https://images.pexels.com/photos/5808361/pexels-photo-5808361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Starbucks",
+        "openStatus": "Open",
+        "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+        ],
+        "rating": 4.5,
+        "distance": 1.5,
+        "shippingFee": "Free shipping"
+    }
+  ]
+}

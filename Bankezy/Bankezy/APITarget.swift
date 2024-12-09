@@ -12,9 +12,16 @@ enum APITarget: TargetType {
     
     case creatAcc(email: String, password: String, phone: String)
     case login(email: String, password: String, autoLogin: Bool)
+    case getCategory
+    case getBestpartner
+    case getPartnerNearby
+    case getPartnerSales
+    case getPartnerRating
+    case getPartnerFast
+    case getPartnerAll
     
     var baseURL: URL {
-        return URL(string: "")!
+        return URL(string: "https://f3fb93b6-d607-4da3-abeb-2312a3ab8bff.mock.pstmn.io")!
     }
     
     var path: String {
@@ -23,6 +30,20 @@ enum APITarget: TargetType {
            return "/creatAcc"
         case .login:
             return "/login"
+        case .getCategory:
+            return "/category"
+        case .getBestpartner:
+            return "/bestPartners"
+        case .getPartnerNearby:
+            return "/bestPartners/nearby"
+        case .getPartnerSales:
+            return "/bestPartners/sales"
+        case .getPartnerRating:
+            return "/bestPartners/rate"
+        case .getPartnerFast:
+            return "/bestPartners/fast"
+        case .getPartnerAll:
+            return "/bestPartner/seeAllPartner"
         }
     }
     
@@ -30,6 +51,8 @@ enum APITarget: TargetType {
         switch self {
         case .creatAcc, .login:
             return .post
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll:
+            return .get
         }
     }
     
@@ -43,6 +66,8 @@ enum APITarget: TargetType {
             return .requestParameters(parameters: ["email": email,
                                                    "password": password,
                                                    "autoLogin": autoLogin], encoding: JSONEncoding.default)
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }
     

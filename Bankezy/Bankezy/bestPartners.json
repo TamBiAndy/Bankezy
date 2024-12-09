@@ -1,0 +1,55 @@
+{
+    "id": "1234",
+    "partners": [
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Taco Bell",
+        "openStatus": "Close",
+        "location": "Santa Nella, CA 95322",
+        "rating": 4.5,
+        "distance": 0.2,
+        "shippingFee": "Free shipping"
+    },
+    {
+        "id": "2",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Subway",
+        "openStatus": "Open",
+        "location": "Santa Nella, CA 95322",
+        "rating": 4.0,
+        "distance": 0.7,
+        "shippingFee": "Free shipping"
+    },
+    {
+        "id": "3",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Burger King",
+        "openStatus": "Close",
+        "location": "Santa Nella, CA 95322",
+        "rating": 4.8,
+        "distance": 0.4,
+        "shippingFee": "Free shipping"
+    },
+    {
+        "id": "4",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Starbucks",
+        "openStatus": "Open",
+        "location": "Santa Nella, CA 95322",
+        "rating": 4.3,
+        "distance": 0.5,
+        "shippingFee": "Free shipping"
+    },
+    {
+        "id": "5",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "McDonald’s",
+        "openStatus": "Close",
+        "location": "Santa Nella, CA 95322",
+        "rating": 4.6,
+        "distance": 0.3,
+        "shippingFee": "Free shipping"
+    }
+    ]
+}

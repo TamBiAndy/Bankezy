@@ -1,0 +1,33 @@
+{
+  "id": "1234",
+  "partners": [
+    {
+      "id": "4",
+      "image": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "titleBrand": "Burger King",
+      "openStatus": "Open",
+      "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+      ],
+      "rating": 4.5,
+      "distance": 0.2,
+      "shippingFee": "Free shipping"
+    },
+    {
+        "id": "4",
+        "image": "https://images.pexels.com/photos/4109206/pexels-photo-4109206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Mc'Donalds",
+        "openStatus": "Open",
+        "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+        ],
+        "rating": 4.5,
+        "distance": 1.5,
+        "shippingFee": "Free shipping"
+    }
+  ]
+}

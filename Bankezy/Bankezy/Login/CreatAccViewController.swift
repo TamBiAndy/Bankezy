@@ -45,7 +45,7 @@ class CreatAccViewController: UIViewController {
         let btn = UIButton(type: .custom)
         btn.setTitle("HIDE", for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.titleLabel?.font = .bold(size: 10)
+//        btn.titleLabel?.font = .bold(size: 10)
         btn.backgroundColor = UIColor(hexString: "49435E")
         btn.layer.cornerRadius = 6
         return btn

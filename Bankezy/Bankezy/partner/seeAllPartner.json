@@ -1,0 +1,87 @@
+{
+  "id": "1234",
+  "partners": [
+    {
+      "id": "4",
+      "image": "https://images.pexels.com/photos/9213979/pexels-photo-9213979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "titleBrand": "Taco Bell",
+      "openStatus": "Open",
+      "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+      ],
+      "rating": 4.5,
+      "distance": 0.2,
+      "shippingFee": "Free shipping"
+    },
+    {
+        "id": "4",
+        "image": "https://images.pexels.com/photos/29614913/pexels-photo-29614913/free-photo-of-delicious-panini-with-french-fries-and-salad.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Subway",
+        "openStatus": "Open",
+        "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+        ],
+        "rating": 4.5,
+        "distance": 1.5,
+        "shippingFee": "Free shipping"
+    },
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/5837192/pexels-photo-5837192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Taco Bell",
+        "openStatus": "Open",
+        "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+        ],
+        "rating": 4.5,
+        "distance": 0.2,
+        "shippingFee": "Free shipping"
+    },
+    {
+        "id": "2",
+        "image": "https://images.pexels.com/photos/11975899/pexels-photo-11975899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Burger King",
+        "openStatus": "Open",
+        "category": [
+        "Burger",
+        "Rice",
+        "Spaghetti"
+        ],
+        "rating": 4.8,
+        "distance": 2.6,
+        "shippingFee": "Free shipping"
+    },{
+        "id": "3",
+        "image": "https://media.istockphoto.com/id/1158133151/vi/anh/%C4%91%C3%B9i-g%C3%A0-gi%C3%B2n-n%C6%B0%E1%BB%9Bng-ki%E1%BB%83u-kfc-v%E1%BB%9Bi-b%C3%A1nh-quy-gi%C3%B2n-mang-%C4%91i.jpg?s=1024x1024&w=is&k=20&c=w8PWYSU11f0X4JuhMRXpj8eHhSKBD9euBGZ6Nkb3Wfc=",
+        "titleBrand": "KFC",
+        "openStatus": "Open",
+        "category": [
+        "FastFood",
+        "Chicken",
+        "Rice"
+        ],
+        "rating": 4.0,
+        "distance": 3.0,
+        "shippingFee": "Free shipping"
+    },{
+        "id": "4",
+        "image": "https://images.pexels.com/photos/29616957/pexels-photo-29616957/free-photo-of-delicious-breakfast-pastry-with-kiwi-slices.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "titleBrand": "Subway",
+        "openStatus": "Open",
+        "category": [
+        "Coffee",
+        "Tea",
+        "Cake"
+        ],
+        "rating": 4.5,
+        "distance": 1.5,
+        "shippingFee": "Free shipping"
+    }
+  ]
+}

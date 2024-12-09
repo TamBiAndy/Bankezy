@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         let btn = UIButton(type: .custom)
         btn.setTitle("FORGOT", for: .normal)
         btn.setTitleColor(UIColor(hexString: "24CDD8"), for: .normal)
-        btn.titleLabel?.font = .bold(size: 10)
+//        btn.titleLabel?.font = .bold(size: 10)
         return btn
     }()
     
@@ -137,7 +137,8 @@ class LoginViewController: UIViewController {
         output.loginIsSuccess
             .drive(onNext: { isSuccess in
                 if isSuccess {
-                    let nextVC = HomeViewController()
+                    let viewModel = HomeViewModel()
+                    let nextVC = HomeViewController(viewModel: viewModel)
                     nextVC.modalPresentationStyle = .fullScreen
                     self.present(nextVC, animated: true)
                 } else {

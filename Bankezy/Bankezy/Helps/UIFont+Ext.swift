@@ -10,26 +10,29 @@ import UIKit
 extension UIFont {
     
     static func bold(size: CGFloat) -> UIFont {
-        .init(name: "InriaSans-Bold", size: size)!
-    }
-    
-    static func lightItalic(size: CGFloat) -> UIFont {
-        .init(name: "InriaSans-LightItalic", size: size)!
-    }
-    
-    static func regular(size: CGFloat) -> UIFont {
-        .init(name: "InriaSans-Regular", size: size)!
-    }
-    
-    static func boldItalic(size: CGFloat) -> UIFont {
-        .init(name: "InriaSans-BoldItalic", size: size)!
-    }
-    
-    static func light(size: CGFloat) -> UIFont {
-        .init(name: "InriaSans-Light", size: size)!
+        .init(name: "Damascus", size: size)!
     }
     
     static func italic(size: CGFloat) -> UIFont {
-        .init(name: "InriaSans-Italic", size: size)!
+        .init(name: "DMSans-Italic", size: size)!
+    }
+    
+    static func regular(size: CGFloat) -> UIFont {
+        .init(name: "Damascus", size: size)!
+    }
+    
+    static func medium(size: CGFloat) -> UIFont {
+        .init(name: "DMSans-Medium", size: size)!
+    }
+    
+    static func light(size: CGFloat) -> UIFont {
+        .init(name: "DMSans-Light", size: size)!
+    }
+    
+    static func semiBold(size: CGFloat) -> UIFont {
+        .init(name: "DMSans-SemiBold", size: size)!
+    }
+    static func thin(size: CGFloat) -> UIFont {
+        .init(name: "DMSans-Thin", size: size)!
     }
 }

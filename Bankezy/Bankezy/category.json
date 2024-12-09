@@ -1,0 +1,30 @@
+{
+    "id": "1234",
+    "category": [
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Sandwich"
+    },
+    {
+        "id": "2",
+        "image": "https://images.pexels.com/photos/845811/pexels-photo-845811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Pizza"
+    },
+    {
+        "id": "3",
+        "image": "https://images.pexels.com/photos/918581/pexels-photo-918581.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "title": "Burgers"
+    },
+    {
+        "id": "4",
+        "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Spaghetti"
+    },
+    {
+        "id": "5",
+        "image": "https://media.istockphoto.com/id/1158133151/vi/anh/%C4%91%C3%B9i-g%C3%A0-gi%C3%B2n-n%C6%B0%E1%BB%9Bng-ki%E1%BB%83u-kfc-v%E1%BB%9Bi-b%C3%A1nh-quy-gi%C3%B2n-mang-%C4%91i.jpg?s=1024x1024&w=is&k=20&c=w8PWYSU11f0X4JuhMRXpj8eHhSKBD9euBGZ6Nkb3Wfc=",
+        "title": "KFC"
+    }
+    ]
+}

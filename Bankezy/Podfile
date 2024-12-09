@@ -17,5 +17,6 @@ target 'Bankezy' do
   pod 'RxGesture'
   pod 'RxSwiftExt'
   pod 'NSObject+Rx'
-
+  pod 'PanModal'
+  
 end

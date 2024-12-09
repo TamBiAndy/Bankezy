@@ -9,20 +9,24 @@ import UIKit
 
 class SessionManager {
     static let shared = SessionManager()
-    let token = ""
+    let token = "jhgfdfgh"
+    
+    var isUserLogged: Bool {
+        !token.isEmpty
+    }
 }
 
 class GetStartedViewController: UIViewController {
-
+    
     @IBOutlet weak var btnCreatAcc: UIButton!
     @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
+        
     }
-  
+    
     @IBAction func clickToLogin(_ sender: Any) {
         let viewModel = LoginViewModel()
         let nextVC = LoginViewController(viewModel: viewModel)
@@ -38,3 +42,4 @@ class GetStartedViewController: UIViewController {
     }
     
 }
+

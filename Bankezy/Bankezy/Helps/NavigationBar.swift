@@ -8,7 +8,7 @@
 import UIKit
 class CustomNavigationBar: UINavigationBar {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return .init(width: UIScreen.main.bounds.width, height: 70)
+        return .init(width: UIScreen.main.bounds.width, height: 88)
     }
 }
 
