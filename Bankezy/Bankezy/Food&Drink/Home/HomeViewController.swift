@@ -204,6 +204,17 @@ class HomeViewController: UIViewController {
                 self.modalPresentationStyle = .overFullScreen
                 self.present(nextVC, animated: true)
             })
+            .disposed(by: rx.disposeBag)
+        
+        searchBar.rx.textDidBeginEditing
+            .bind(onNext: {
+                let viewModel = SearchResultViewModel()
+                let searchVc = SearchResultViewController(viewModel: viewModel)
+                self.navigationController?.pushViewController(searchVc, animated: true)
+            })
+            .disposed(by: rx.disposeBag)
+        
+      
     }
     
     private func setupSearchBar() {

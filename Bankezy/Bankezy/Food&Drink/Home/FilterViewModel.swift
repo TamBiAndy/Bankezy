@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Moya
+import NSObject_Rx
 
 enum Filter {
     case category
@@ -18,7 +19,18 @@ enum Filter {
 
 
 class FilterViewModel {
+    let bag = DisposeBag()
+    
     let provider = MoyaProvider<APITarget>(stubClosure: MoyaProvider.delayedStub(2))
+    
+    let sortbyRelay = BehaviorRelay<[SortbyFilter]>(value: [
+        SortbyFilter(title: "Recomended", leftIcon: UIImage(named: "bookmark"), rightIcon: UIImage(named: "ic_select")),
+        SortbyFilter(title: "Fastest Delivery", leftIcon: UIImage(named: "Time"), rightIcon: UIImage(named: "")),
+        SortbyFilter(title: "Most Popular", leftIcon: UIImage(named: "Flame"), rightIcon: UIImage(named: ""))
+    ])
+    
+    var selectedCategoriesRelay = BehaviorRelay<[CategoryResponse.Category]>(value: [])
+    var selectedSortbyRelay = BehaviorRelay<[SortbyFilter]>(value: [])
     
     func transform(input: Input) -> Output {
         let categoryObv = input.viewDidload
@@ -33,7 +45,49 @@ class FilterViewModel {
             .compactMap(\.category)
             .asDriver(onErrorJustReturn: [])
         
-        return .init(category: categoryDriver)
+        input.categorySelected
+            .withLatestFrom(selectedCategoriesRelay) { selected, current in
+                var updated = current
+                if let index = updated.firstIndex(where: { $0.id == selected.id }) {
+                    updated.remove(at: index)
+                } else {
+                    updated.append(selected)
+                }
+                return updated
+            }
+            .bind(to: selectedCategoriesRelay)
+            .disposed(by: bag)
+        
+        input.sortbySelected
+            .withLatestFrom(selectedSortbyRelay) { selected, current in
+                var update = current
+                if let index = update.firstIndex(where: { $0.title == selected.title}) {
+                    update.remove(at: index)
+                } else {
+                    update.append(selected)
+                }
+                return update
+            }
+            .bind(to: selectedSortbyRelay)
+            .disposed(by: bag)
+        
+//        
+//        let filterInforDriver = input.completeTapped
+//            .withLatestFrom(selectedCategoriesRelay.asObservable())
+//            .withLatestFrom(selectedSortbyRelay.asObservable()) { ($0, $1) }
+//            .withLatestFrom(input.priceMin) { ($0, $1) }
+//            .withLatestFrom(input.priceMax) { ($0, $1) }
+//            .flatMapLatest { combineValue in
+//                let (categories, sortby, priceMin, priceMax) = combineValue
+//            }
+//            .asDriver(onErrorJustReturn: .empty)
+        
+        return .init(
+            category: categoryDriver, 
+            sortbyDriver: sortbyRelay.asDriver(),
+//            filterInfor: filterInforDriver,
+            error: .empty()
+        )
     }
 }
 
@@ -49,7 +103,8 @@ extension FilterViewModel {
     
     struct Output {
         let category: Driver<[CategoryResponse.Category]>
-        let isSuccess: Driver<Bool>
+        let sortbyDriver: Driver<[SortbyFilter]>
+//        let filterInfor: Driver<FilterInfo>
         let error: Driver<Error>
     }
 }

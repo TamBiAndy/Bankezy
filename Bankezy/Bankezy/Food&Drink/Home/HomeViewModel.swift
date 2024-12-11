@@ -128,6 +128,24 @@ class HomeViewModel {
             
             switch partnerSelected {
             case .nearby:
+//                let filteredPatner = nearbyPartners.filter { partner in
+//                     if
+//                    let isVaidCategory =  filterInfo.categorys.fsfdsfs(partner.category)
+//                    
+//                    var isValidSortBy = true
+//                    if filterInfo.sortBy.contains(where: { $0.name == "Recommended"  }) {
+//                        isValidSortBy = partner.rating < 4
+//                    }
+//                    
+//                    if filterInfo.sortBy.contains(where: { $0.name == "fastestDelivery"  }) {
+//                        isValidSortBy = partner.deliveryMinute < 10
+//                    }
+//    
+//                    
+//                    return isVaidCategory && isValidSortBy
+//                }
+//                
+//                return filteredPatner
                 return nearbyPartners
             case .sales:
                 return salesPartners
@@ -157,4 +175,11 @@ extension HomeViewModel {
         let bestPartners: Driver<[BestPartnersResponse.Partner]>
         let partners: Driver<[BestPartnersResponse.Partner]>
     }
+}
+
+struct FilterInfo {
+    let categorys: [String]
+    let sortBy: [String]
+    let minPrice: Double?
+    let maxPrice: Double?
 }

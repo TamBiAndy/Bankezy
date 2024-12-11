@@ -19,6 +19,7 @@ enum APITarget: TargetType {
     case getPartnerRating
     case getPartnerFast
     case getPartnerAll
+    case searchPartner
     
     var baseURL: URL {
         return URL(string: "https://f3fb93b6-d607-4da3-abeb-2312a3ab8bff.mock.pstmn.io")!
@@ -44,6 +45,8 @@ enum APITarget: TargetType {
             return "/bestPartners/fast"
         case .getPartnerAll:
             return "/bestPartner/seeAllPartner"
+        case .searchPartner:
+            return "/searchPartner"
         }
     }
     
@@ -51,7 +54,7 @@ enum APITarget: TargetType {
         switch self {
         case .creatAcc, .login:
             return .post
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner:
             return .get
         }
     }
@@ -66,7 +69,7 @@ enum APITarget: TargetType {
             return .requestParameters(parameters: ["email": email,
                                                    "password": password,
                                                    "autoLogin": autoLogin], encoding: JSONEncoding.default)
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         }
     }

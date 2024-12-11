@@ -62,11 +62,6 @@ class FilterViewController: UIViewController {
     //MARK: Variables
     var viewModel: FilterViewModel
     
-    let sortbyRelay = BehaviorRelay<[SortbyFilter]>(value: [
-        SortbyFilter(title: "Recomended", leftIcon: UIImage(named: "bookmark"), rightIcon: UIImage(named: "ic_select")),
-        SortbyFilter(title: "Fastest Delivery", leftIcon: UIImage(named: "Time"), rightIcon: UIImage(named: "")),
-        SortbyFilter(title: "Most Popular", leftIcon: UIImage(named: "Flame"), rightIcon: UIImage(named: ""))
-    ])
     
     //MARK: Initializers
     init(viewModel: FilterViewModel) {
@@ -90,11 +85,24 @@ class FilterViewController: UIViewController {
     //MARK: Private func
     
     private func bindingData() {
-        let input = FilterViewModel.Input(viewDidload: .just(()))
+        let categorySelected = categoryCollectionView.rx.modelSelected(CategoryResponse.Category.self)
+            .asObservable()
+        
+        let sortbySelected = sortbyTableView.rx.modelSelected(SortbyFilter.self)
+            .asObservable()
+        
+        let input = FilterViewModel.Input(
+            viewDidload: .just(()),
+            categorySelected: categorySelected,
+            sortbySelected: sortbySelected,
+            priceMin: tfMinPrice.rx.text.asObservable(),
+            priceMax: tfMaxPrice.rx.text.asObservable(),
+            completeTapped: btnComplete.rx.tap.asObservable())
+        
         let output = viewModel.transform(input: input)
         
-        sortbyRelay
-            .bind(to: sortbyTableView.rx.items(cellIdentifier: "sortbyTableViewCell", cellType: sortbyTableViewCell.self)) { index, sortby, cell in
+        output.sortbyDriver
+            .drive(sortbyTableView.rx.items(cellIdentifier: "sortbyTableViewCell", cellType: sortbyTableViewCell.self)) { index, sortby, cell in
                 cell.bind(with: sortby)
             }
             .disposed(by: rx.disposeBag)
@@ -105,6 +113,12 @@ class FilterViewController: UIViewController {
                 cell.imgFood.kf.setImage(with: URL(string: category.image ?? ""))
             }
             .disposed(by: rx.disposeBag)
+        
+//        output.isSuccess
+//            .drive(onNext: { filterInfor in
+//                    
+//                })
+//            .disposed(by: rx.disposeBag)
     }
     private func filterSelected() {
        let itemFilterSelected = Observable.merge(
