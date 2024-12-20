@@ -4,7 +4,7 @@
     {
         "id": "1",
         "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "titleBrand": "Burger King",
+        "titleBrand": "Burger TamBi",
         "price": 25.0,
         "dish": "Food"
     },
@@ -18,7 +18,7 @@
     {
         "id": "1",
         "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "titleBrand": "Burger King",
+        "titleBrand": "Burger Andy",
         "price": 25.0,
         "dish": "Food"
     },

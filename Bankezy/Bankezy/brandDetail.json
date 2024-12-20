@@ -1,0 +1,11 @@
+{
+  "id": "1234",
+  "titleBrand": "Burger King",
+  "service": "Take away",
+  "openStatus": "Open",
+  "location": "1453 W Manchester Ave Los Angeles CA 90047",
+  "rating": 4.5,
+  "shippingTime": "15 Mins",
+  "shippingFee": "Free shipping",
+  "discount": "Save $15.00 with code Total Dish"
+}

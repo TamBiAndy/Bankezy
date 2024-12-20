@@ -1,0 +1,47 @@
+{
+    "id": "1234",
+    "popularItems": [
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Extreme cheese whopper JR",
+        "price": 5.99,
+        "dish": "Burger"
+    },
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Singles BBQ bacon cheese burger",
+        "price": 7.99,
+        "dish": "Burger"
+    },
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Potato chip Burrger cheese",
+        "price": 3.99,
+        "dish": "Burger"
+    },
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Chicken Pizza",
+        "price": 4.99,
+        "dish": "Pizza"
+    },
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "Italy Beef Spagetti",
+        "price": 7.09,
+        "dish": "Spagetti"
+    },
+    {
+        "id": "1",
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "title": "SeaFood Pizza",
+        "price": 5.99,
+        "dish": "Pizza"
+    }
+    ]
+}

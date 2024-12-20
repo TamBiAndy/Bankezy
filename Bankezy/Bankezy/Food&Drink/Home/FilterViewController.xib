@@ -285,26 +285,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGl-SB-kuk">
-                    <rect key="frame" x="176.66666666666666" y="727" width="40" height="5"/>
-                    <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="40" id="Wkr-Tc-Bpj"/>
-                        <constraint firstAttribute="height" constant="5" id="qrY-kr-E8a"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="2"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SqO-Pr-ga0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3IP-H0-je8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rTg-5R-8QL" secondAttribute="trailing" constant="35" id="3iO-fR-bC8"/>
-                <constraint firstItem="QGl-SB-kuk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5F3-5S-e2e"/>
                 <constraint firstItem="fuC-xv-jQN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="AN1-zq-Ykt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wD9-mr-GbA" secondAttribute="trailing" constant="35" id="BXo-Po-nea"/>
                 <constraint firstItem="SqO-Pr-ga0" firstAttribute="top" secondItem="wD9-mr-GbA" secondAttribute="bottom" constant="25" id="Ig0-N2-LbF"/>
@@ -313,7 +299,6 @@
                 <constraint firstItem="fuC-xv-jQN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="WaE-UI-I8b"/>
                 <constraint firstItem="rTg-5R-8QL" firstAttribute="top" secondItem="SqO-Pr-ga0" secondAttribute="bottom" constant="24" id="Y2v-im-EPt"/>
                 <constraint firstItem="2F3-3i-mhp" firstAttribute="top" secondItem="fuC-xv-jQN" secondAttribute="bottom" constant="24" id="cDR-xM-yWr"/>
-                <constraint firstItem="QGl-SB-kuk" firstAttribute="top" secondItem="rTg-5R-8QL" secondAttribute="bottom" constant="24" id="cxs-1f-NNY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fuC-xv-jQN" secondAttribute="trailing" constant="35" id="mp7-Hf-dzx"/>
                 <constraint firstItem="wD9-mr-GbA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="pU2-4w-6FJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2F3-3i-mhp" secondAttribute="trailing" id="rfz-QT-voX"/>

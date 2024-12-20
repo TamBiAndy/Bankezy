@@ -71,21 +71,30 @@ class FilterViewModel {
             .bind(to: selectedSortbyRelay)
             .disposed(by: bag)
         
-//        
-//        let filterInforDriver = input.completeTapped
-//            .withLatestFrom(selectedCategoriesRelay.asObservable())
-//            .withLatestFrom(selectedSortbyRelay.asObservable()) { ($0, $1) }
-//            .withLatestFrom(input.priceMin) { ($0, $1) }
-//            .withLatestFrom(input.priceMax) { ($0, $1) }
-//            .flatMapLatest { combineValue in
-//                let (categories, sortby, priceMin, priceMax) = combineValue
-//            }
-//            .asDriver(onErrorJustReturn: .empty)
+        let filterInfo = Observable.combineLatest(
+            selectedCategoriesRelay.asObservable().startWith([]),
+            selectedSortbyRelay.asObservable().startWith([]),
+            input.priceMin.startWith(nil),
+            input.priceMax.startWith(nil)
+        )
+        
+        let filterInforDriver = input.completeTapped
+            .withLatestFrom(filterInfo)
+            .map { filterInfo in
+                let (categories, sortby, priceMin, priceMax) = filterInfo
+                return FilterInfo(
+                    categorys: categories.compactMap(\.title),
+                    sortBy: sortby.compactMap(\.title),
+                    minPrice: Double(priceMin ?? ""),
+                    maxPrice: Double(priceMax ?? "")
+                )
+            }
+            .asDriver(onErrorDriveWith: .empty())
         
         return .init(
             category: categoryDriver, 
             sortbyDriver: sortbyRelay.asDriver(),
-//            filterInfor: filterInforDriver,
+            filterInfor: filterInforDriver,
             error: .empty()
         )
     }
@@ -104,7 +113,7 @@ extension FilterViewModel {
     struct Output {
         let category: Driver<[CategoryResponse.Category]>
         let sortbyDriver: Driver<[SortbyFilter]>
-//        let filterInfor: Driver<FilterInfo>
+        let filterInfor: Driver<FilterInfo>
         let error: Driver<Error>
     }
 }

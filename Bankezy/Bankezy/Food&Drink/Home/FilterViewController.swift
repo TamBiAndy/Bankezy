@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
+import FloatingPanel
 
 struct SortbyFilter {
     let title: String?
@@ -61,11 +61,18 @@ class FilterViewController: UIViewController {
     
     //MARK: Variables
     var viewModel: FilterViewModel
-    
+    var completionHandler: ((FilterInfo) -> Void)?
+    let filterInfoSubject: PublishSubject<FilterInfo>
     
     //MARK: Initializers
-    init(viewModel: FilterViewModel) {
+    init(
+        viewModel: FilterViewModel,
+        completionHandler: @escaping (FilterInfo) -> Void,
+        filterInfoSubject: PublishSubject<FilterInfo>
+    ) {
         self.viewModel = viewModel
+        self.completionHandler = completionHandler
+        self.filterInfoSubject = filterInfoSubject
         super.init(nibName: "FilterViewController", bundle: nil)
     }
     
@@ -114,12 +121,16 @@ class FilterViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
         
-//        output.isSuccess
-//            .drive(onNext: { filterInfor in
-//                    
-//                })
-//            .disposed(by: rx.disposeBag)
+        output.filterInfor
+            .drive(onNext: { filterInfor in
+                self.completionHandler?(filterInfor)
+                // Or
+//                self.filterInfoSubject.onNext(filterInfor)
+            })
+            .disposed(by: rx.disposeBag)
     }
+    
+    
     private func filterSelected() {
        let itemFilterSelected = Observable.merge(
             btnCategory.rx.tap.mapTo(Filter.category).asObservable(),
@@ -202,7 +213,18 @@ class FilterViewController: UIViewController {
             searchTextField.attributedPlaceholder = NSAttributedString(string: "Search on Coody", attributes: [.foregroundColor: UIColor(hexString: "7A869A"), .font: UIFont.regular(size: 14)])
         }
     }
+}
 
+extension FilterViewController: FloatingPanelControllerDelegate {
+    func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout {
+        return TopPositionedPanelLayout()
+    }
+}
 
-
+class TopPositionedPanelLayout: FloatingPanelLayout {
+    let position: FloatingPanelPosition = .top
+    let initialState: FloatingPanelState = .full
+    let anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] = [
+        .full: FloatingPanelLayoutAnchor(absoluteInset: 435, edge: .top, referenceGuide: .safeArea)
+    ]
 }

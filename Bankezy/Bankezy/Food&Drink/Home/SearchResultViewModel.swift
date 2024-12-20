@@ -28,27 +28,29 @@ class SearchResultViewModel {
     var items = BehaviorRelay<[SearchPartnerResponse.Partner]>(value: [])
     
     func transform(input: Input) -> Output {
-        let itemsObv = input.searchText
-            .compactMap { $0 }
-            .debounce(.milliseconds(300), scheduler: MainScheduler.instance) // Chờ user dừng gõ trong 300ms
-            .distinctUntilChanged()
-            .flatMapLatest { searchKey in
+        let itemsObv = input.viewDidLoad
+            .flatMapLatest { _ in
                 self.provider.rx.request(.searchPartner)
                     .map(SearchPartnerResponse.self)
-                    .map { response in
-                        (searchKey, response.partners ?? [])
-                    }
+                    .compactMap(\.partners)
             }
-            .asObservable()
-            .catchErrorJustComplete()
         
-        let itemsDriver = itemsObv
-            .map { searchKey, items in
-                items.filter { item in
-                    return item.titleBrand?.lowercased().contains(searchKey.lowercased()) ?? false
+        let itemsDriver = Observable.combineLatest(
+            input.searchText.startWith("").compactMap { $0 },
+            itemsObv
+        )
+        .map { combined -> [SearchPartnerResponse.Partner] in
+            let (searchKey, items) = combined
+            
+            if searchKey.isEmpty {
+                return items
+            } else {
+                return items.filter { item in
+                    return (item.titleBrand?.lowercased().contains(searchKey.lowercased()) ?? false) || item.dish == searchKey
                 }
             }
-            .asDriver(onErrorJustReturn: [])
+        }
+        .asDriver(onErrorJustReturn: [])
         
         return .init(items: itemsDriver)
     }
@@ -56,6 +58,7 @@ class SearchResultViewModel {
 
 extension SearchResultViewModel {
     struct Input {
+        let viewDidLoad: Observable<Void>
         let searchText: Observable<String?>
     }
     

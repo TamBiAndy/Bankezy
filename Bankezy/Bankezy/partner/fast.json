@@ -13,7 +13,10 @@
       ],
       "rating": 4.5,
       "distance": 0.2,
-      "shippingFee": "Free shipping"
+      "shippingFee": "Free shipping",
+      "timeShipping": 11,
+      "buyCount": 35,
+      "price": 7.99
     },
     {
         "id": "4",
@@ -27,7 +30,10 @@
         ],
         "rating": 4.5,
         "distance": 1.5,
-        "shippingFee": "Free shipping"
+        "shippingFee": "Free shipping",
+        "timeShipping": 7,
+        "buyCount": 200,
+        "price": 5.99
     }
   ]
 }

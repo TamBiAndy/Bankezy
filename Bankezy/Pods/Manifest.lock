@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (5.10.1)
   - Cosmos (25.0.1)
+  - Differentiator (5.0.0)
+  - FloatingPanel (2.8.6)
   - Kingfisher (7.12.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
@@ -14,6 +16,10 @@ PODS:
   - RxCocoa (6.8.0):
     - RxRelay (= 6.8.0)
     - RxSwift (= 6.8.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxGesture (4.0.4):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
@@ -32,12 +38,14 @@ PODS:
 
 DEPENDENCIES:
   - Cosmos (~> 25.0)
+  - FloatingPanel
   - Kingfisher (~> 7.0)
   - Moya/RxSwift (~> 15.0)
   - "NSObject+Rx"
   - PanModal
   - ProgressHUD
   - RxCocoa
+  - RxDataSources (~> 5.0)
   - RxGesture
   - RxSwift
   - RxSwiftExt
@@ -47,12 +55,15 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Cosmos
+    - Differentiator
+    - FloatingPanel
     - Kingfisher
     - Moya
     - "NSObject+Rx"
     - PanModal
     - ProgressHUD
     - RxCocoa
+    - RxDataSources
     - RxGesture
     - RxRelay
     - RxSwift
@@ -62,18 +73,21 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 840d2a1ad82355b536ec6ba5f97e5bfa54600ca3
   Cosmos: 02db0a1c953107049bfd2d7af19ceef55ecb7e98
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  FloatingPanel: 11559d3700c39f1c2ee8dbb7a5415223b52fdce0
   Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   ProgressHUD: abb9136ae23c85204236828562cb9a8ec98efb44
   RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
   RxRelay: 335c78b926a2aea8d863a6d25f1ed3b5ad8e8705
   RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
   RxSwiftExt: 43aaacb6a4d3c69c55e9d1cf4f79920043d13583
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 9c2310d2f673175765eb3833946a704adb7e9d8a
+PODFILE CHECKSUM: fecef17e2d053e4a81d94ed18e78ec9dd78b448c
 
 COCOAPODS: 1.15.2

@@ -20,12 +20,11 @@ class SearchTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgBrand.clipsToBounds = true
+        imgBrand.layer.cornerRadius = 15
+        imgBrand.layer.masksToBounds = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
+    
     func bind(with item: SearchPartnerResponse.Partner) {
         self.imgBrand.kf.setImage(with: URL(string: item.image ?? ""))
         self.lblTitleBrand.text = item.titleBrand

@@ -68,7 +68,9 @@ class SearchResultViewController: UIViewController {
     }
     
     func bindingData() {
-        let input = SearchResultViewModel.Input(searchText: searchBar.rx.text.asObservable())
+        let input = SearchResultViewModel.Input(
+            viewDidLoad: .just(()),
+            searchText: searchBar.rx.text.asObservable())
         
         let output = viewModel.transform(input: input)
         

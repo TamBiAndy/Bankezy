@@ -18,5 +18,7 @@ target 'Bankezy' do
   pod 'RxSwiftExt'
   pod 'NSObject+Rx'
   pod 'PanModal'
+  pod 'FloatingPanel'
+  pod 'RxDataSources', '~> 5.0'
   
 end

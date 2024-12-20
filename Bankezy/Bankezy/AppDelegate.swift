@@ -14,15 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
+//        let viewModel = DetailBrandViewModel()
+//        
+//        window?.rootViewController = DetailBrandViewController(viewModel: viewModel)
         
-        window?.rootViewController = TabBarController()
-        
-//        if SessionManager.shared.isUserLogged {
-//            window?.rootViewController = TabBarController()
-//        } else {
-//            
-//            window?.rootViewController = GetStartedViewController()
-//        }
+        if SessionManager.shared.isUserLogged {
+            window?.rootViewController = TabBarController()
+        } else {
+            
+            window?.rootViewController = GetStartedViewController()
+        }
         window?.makeKeyAndVisible()
         return true
     }

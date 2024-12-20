@@ -11,6 +11,7 @@ import RxCocoa
 import Kingfisher
 import SnapKit
 import PanModal
+import FloatingPanel
 
 class HomeViewController: UIViewController {
     
@@ -73,7 +74,7 @@ class HomeViewController: UIViewController {
     
     //MARK: Variables
     var viewModel: HomeViewModel
-    
+    let filterInfoSubject = PublishSubject<FilterInfo>()
 //    @IBOutlet weak var bestPartnersTableViewHeight: NSLayoutConstraint!
     
     //MARK: Initializers
@@ -158,7 +159,11 @@ class HomeViewController: UIViewController {
             })
             .disposed(by: rx.disposeBag)
         
-        let input = HomeViewModel.Input(viewDidload: .just(()), parterSelected: parterSelected)
+        let input = HomeViewModel.Input(
+            viewDidload: .just(()),
+            parterSelected: parterSelected,
+            filterInfo: filterInfoSubject.asObservable()
+        )
         
         let output = viewModel.transfer(input: input)
         
@@ -200,21 +205,77 @@ class HomeViewController: UIViewController {
         btnFilter.rx.tap
             .bind(onNext: {
                 let viewmodel = FilterViewModel()
-                let nextVC = FilterViewController(viewModel: viewmodel)
-                self.modalPresentationStyle = .overFullScreen
-                self.present(nextVC, animated: true)
+                let nextVC = FilterViewController(
+                    viewModel: viewmodel,
+                    completionHandler: { filterInfo in
+                        self.filterInfoSubject.onNext(filterInfo)
+                    },
+                    filterInfoSubject: self.filterInfoSubject
+                )
+                
+                let fpc = FloatingPanelController()
+                
+                // Assign self as the delegate of the controller.
+                fpc.delegate = nextVC // Optional
+                
+                let appearance = SurfaceAppearance()
+                appearance.cornerRadius = 30
+                fpc.surfaceView.appearance = appearance
+                
+                fpc.backdropView.dismissalTapGestureRecognizer.isEnabled = true
+                
+                // Set a content view controller.
+                fpc.set(contentViewController: nextVC)
+                
+                
+                
+                // Add and show the views managed by the `FloatingPanelController` object to self.view.
+                fpc.addPanel(toParent: self, animated: true)
             })
             .disposed(by: rx.disposeBag)
         
         searchBar.rx.textDidBeginEditing
             .bind(onNext: {
+                self.searchBar.searchTextField.resignFirstResponder()
+                
                 let viewModel = SearchResultViewModel()
                 let searchVc = SearchResultViewController(viewModel: viewModel)
                 self.navigationController?.pushViewController(searchVc, animated: true)
             })
             .disposed(by: rx.disposeBag)
         
+        bestPartnerCollectionView.rx.modelSelected(BestPartnersResponse.Partner.self)
+            .bind(onNext: { item in
+                let id = item.id
+                self.goToDetailBrandVC(with: id)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        bestPartnersTableView.rx.modelSelected(BestPartnersResponse.Partner.self)
+            .bind(onNext: { item in
+                let id = item.id
+                self.goToDetailBrandVC(with: id)
+            })
+            .disposed(by: rx.disposeBag)
       
+    }
+    
+    func goToDetailBrandVC(with brandId: String?) {
+        let viewModel = DetailBrandViewModel(brandId: brandId)
+        let detailVC = DetailBrandViewController(viewModel: viewModel)
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+//        let fpc = FloatingPanelController()
+//
+//        fpc.delegate = detailVC
+//        
+//        let appearance = SurfaceAppearance()
+//        appearance.cornerRadius = 30
+//        fpc.surfaceView.appearance = appearance
+//        fpc.backdropView.dismissalTapGestureRecognizer.isEnabled = true
+//        fpc.set(contentViewController: detailVC)
+//
+//        fpc.addPanel(toParent: self, animated: true)
     }
     
     private func setupSearchBar() {

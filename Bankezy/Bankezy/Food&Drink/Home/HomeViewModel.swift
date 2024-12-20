@@ -33,6 +33,9 @@ struct BestPartnersResponse: Codable {
         let distance: Double?
         let shippingFee: String?
         let category: [String]?
+        let timeShipping: Int?
+        let buyCount: Int?
+        let price: Double?
     }
     
     let id: String?
@@ -121,38 +124,43 @@ class HomeViewModel {
             .asDriver(onErrorJustReturn: [])
         
         let partners = Driver.combineLatest(
+            input.filterInfo.asDriver(onErrorDriveWith: .empty()),
             input.parterSelected.asDriver(onErrorJustReturn: .nearby),
             partnersNearbyDriver, partnersSalesDriver, partnersFastDriver, partnersRateDriver
         )
-        .map { partnerSelected, nearbyPartners, salesPartners, fastPartners, ratePartners in
+        .map { filterInfo, partnerSelected, nearbyPartners, salesPartners, fastPartners, ratePartners in
             
             switch partnerSelected {
             case .nearby:
-//                let filteredPatner = nearbyPartners.filter { partner in
-//                     if
-//                    let isVaidCategory =  filterInfo.categorys.fsfdsfs(partner.category)
-//                    
-//                    var isValidSortBy = true
-//                    if filterInfo.sortBy.contains(where: { $0.name == "Recommended"  }) {
-//                        isValidSortBy = partner.rating < 4
-//                    }
-//                    
-//                    if filterInfo.sortBy.contains(where: { $0.name == "fastestDelivery"  }) {
-//                        isValidSortBy = partner.deliveryMinute < 10
-//                    }
-//    
-//                    
-//                    return isVaidCategory && isValidSortBy
-//                }
-//                
-//                return filteredPatner
-                return nearbyPartners
+                let filteredPatner = nearbyPartners.filter { partner in
+                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                }
+                return filteredPatner
             case .sales:
-                return salesPartners
+                let filteredPatner = salesPartners.filter { partner in
+                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                }
+                return filteredPatner
+                
             case .fast:
-                return fastPartners
+                let filteredPatner = fastPartners.filter { partner in
+                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                }
+                return filteredPatner
+                
             case .rate:
-                return ratePartners
+                let filteredPatner = ratePartners.filter { partner in
+                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                }
+                return filteredPatner
             }
         }
         
@@ -162,12 +170,42 @@ class HomeViewModel {
             partners: partners
         )
     }
+    
+    func isValidCategory(partner: BestPartnersResponse.Partner, filterInfo: FilterInfo) -> Bool {
+        return filterInfo.categorys.contains(partner.category ?? [])
+    }
+    
+    func isValidSortby(partner: BestPartnersResponse.Partner, filterInfo: FilterInfo) -> Bool {
+        var isValidSortBy = true
+        
+        if filterInfo.sortBy.contains(where: { $0 == "Recommended" }) {
+            isValidSortBy = partner.rating ?? 0 >= 4.0
+        }
+        if filterInfo.sortBy.contains(where: { $0 == "FastestDelivery" }) {
+            isValidSortBy = partner.timeShipping ?? 0 <= 5
+        }
+        if filterInfo.sortBy.contains(where: { $0 == "Most Popular"}) {
+            isValidSortBy = partner.buyCount ?? 0 >= 100
+        }
+        return isValidSortBy
+    }
+    
+    func isValidPrice(partner: BestPartnersResponse.Partner, filterInfo: FilterInfo) -> Bool {
+        let partnerPrice = partner.price ?? 0
+         let isValidPrice =
+        (filterInfo.minPrice == nil || partnerPrice >= filterInfo.minPrice!) &&
+        (filterInfo.maxPrice == nil || partnerPrice <= filterInfo.maxPrice!)
+        return isValidPrice
+    }
+    
+    
 }
 
 extension HomeViewModel {
     struct Input {
         let viewDidload: Observable<Void>
         let parterSelected: Observable<Partner>
+        let filterInfo: Observable<FilterInfo>
     }
     
     struct Output {
