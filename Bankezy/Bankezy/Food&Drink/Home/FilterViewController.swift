@@ -62,13 +62,13 @@ class FilterViewController: UIViewController {
     //MARK: Variables
     var viewModel: FilterViewModel
     var completionHandler: ((FilterInfo) -> Void)?
-    let filterInfoSubject: PublishSubject<FilterInfo>
+    let filterInfoSubject: PublishSubject<FilterInfo?>
     
     //MARK: Initializers
     init(
         viewModel: FilterViewModel,
         completionHandler: @escaping (FilterInfo) -> Void,
-        filterInfoSubject: PublishSubject<FilterInfo>
+        filterInfoSubject: PublishSubject<FilterInfo?>
     ) {
         self.viewModel = viewModel
         self.completionHandler = completionHandler

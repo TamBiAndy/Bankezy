@@ -13,6 +13,13 @@ extension UIButton {
             } else { return }
         }
     }
+    
+    func applyShadowForButton(color: UIColor?, alpha: Float?, width: Int?, height: Int?, radius: CGFloat?) {
+        self.layer.shadowColor = color?.cgColor
+        self.layer.shadowOpacity = alpha ?? 0
+        self.layer.shadowOffset = CGSize(width: width ?? 0, height: height ?? 0)
+        self.layer.shadowRadius = radius ?? 0
+    }
 }
 
 

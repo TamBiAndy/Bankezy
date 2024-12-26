@@ -24,6 +24,8 @@ enum APITarget: TargetType {
     case popularItemsOfBrand
     case getMenuOfBrand
     case getReviewBrand
+    case getDishInfor
+    case addToCart(id: String?, size: String?, qty: String?)
     
     var baseURL: URL {
         return URL(string: "https://f3fb93b6-d607-4da3-abeb-2312a3ab8bff.mock.pstmn.io")!
@@ -59,14 +61,18 @@ enum APITarget: TargetType {
             return "/menu"
         case .getReviewBrand:
             return "/reviewBrand"
+        case .getDishInfor:
+            return "/dishInfor"
+        case .addToCart:
+            return "/addToCart"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .creatAcc, .login:
+        case .creatAcc, .login, .addToCart:
             return .post
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor:
             return .get
         }
     }
@@ -81,8 +87,13 @@ enum APITarget: TargetType {
             return .requestParameters(parameters: ["email": email,
                                                    "password": password,
                                                    "autoLogin": autoLogin], encoding: JSONEncoding.default)
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+            
+        case .addToCart(let id, let size, let qty):
+            return .requestParameters(parameters: ["id": id ?? "",
+                                                   "size": size ?? "",
+                                                   "qty": qty ?? ""], encoding: JSONEncoding.default)
         }
     }
     

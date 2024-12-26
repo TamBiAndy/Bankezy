@@ -39,7 +39,7 @@ struct PopularItemResponse: Codable {
 struct MenuResponse: Codable {
   struct Menu: Codable {
     struct Item: Codable {
-      let id: Int?
+      let id: String?
       let image: String?
       let title: String?
       let price: Double?

@@ -52,11 +52,17 @@ class DetailBrandViewController: UIViewController {
         case .popular(let items):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularItemsTableViewCell", for: indexPath) as? PopularItemsTableViewCell else { return .init() }
             cell.bind(with: items)
-            
+            cell.selectedItem = { selectedItem in
+                let id = selectedItem.id
+                let viewModel = AddToCartViewModel(dishId: id)
+                let addToCartVc = AddToCartViewController(viewModel: viewModel)
+                self.navigationController?.pushViewController(addToCartVc, animated: true)
+            }
             return cell
         case .dish(let item):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else { return .init() }
             cell.bind(item: item)
+            
             return cell
         case .review(let item):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as? ReviewTableViewCell else { return .init() }
@@ -137,8 +143,20 @@ class DetailBrandViewController: UIViewController {
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx.disposeBag)
         
-//        tableView.rx.contentSize
-//            .bind(onNext: {)
+        tableView.rx.modelSelected(Item.self)
+            .bind(onNext: { item in
+                switch item {
+                case .dish(let dish):
+                    let id = dish.id
+                    let viewModel = AddToCartViewModel(dishId: id)
+                    let addToCartVc = AddToCartViewController(viewModel: viewModel)
+                    self.navigationController?.pushViewController(addToCartVc, animated: true)
+                default:
+                    break
+                }
+            })
+            .disposed(by: rx.disposeBag)
+
     }
     
     private func setupView() {

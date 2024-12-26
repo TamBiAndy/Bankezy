@@ -4,21 +4,21 @@
       "header": "Hot Burger Combo",
       "items": [
           {
-              "id": 1,
+              "id": "1",
               "image": "https://images.pexels.com/photos/2271107/pexels-photo-2271107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               "title": "Combo spicy tender",
               "price": 10.15,
               "type": "Burger combo"
           },
           {
-              "id": 2,
+              "id": "2",
               "image": "https://images.pexels.com/photos/750073/pexels-photo-750073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               "title": "Combo Tender Grill  Burger",
               "price": 10.15,
               "type": "Burger combo"
           },
           {
-              "id": 3,
+              "id": "3",
               "image": "https://images.pexels.com/photos/551991/pexels-photo-551991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               "title": "Combo BBQ Bacon Cheese Burger",
               "price": 10.15,
@@ -30,21 +30,21 @@
       "header": "Fried Chicken",
       "items": [
           {
-              "id": 1,
+              "id": "1",
               "image": "https://images.pexels.com/photos/5718025/pexels-photo-5718025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               "title": "Chicken BBQ",
               "price": 10.15,
               "type": "Chicken combo"
           },
           {
-              "id": 2,
+              "id": "2",
               "image": "https://images.pexels.com/photos/10361459/pexels-photo-10361459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               "title": "Combo Chicken Crispy 3pcs",
               "price": 10.15,
               "type": "Chicken combo"
           },
           {
-              "id": 3,
+              "id": "3",
               "image": "https://images.pexels.com/photos/19737927/pexels-photo-19737927/free-photo-of-close-up-of-a-chicken-burger-with-lettuce-and-tomato.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               "title": "Combo BBQ Bacon Cheese Burger",
               "price": 10.15,

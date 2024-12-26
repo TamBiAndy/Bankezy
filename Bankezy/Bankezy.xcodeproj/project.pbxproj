@@ -81,6 +81,13 @@
 		A19E16692D114B2C00E0B856 /* PopularItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E16672D114B2C00E0B856 /* PopularItemsCollectionViewCell.swift */; };
 		A19E166A2D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E16682D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib */; };
 		A19E166C2D114E4A00E0B856 /* reviewBrand.json in Resources */ = {isa = PBXBuildFile; fileRef = A19E166B2D114E4A00E0B856 /* reviewBrand.json */; };
+		A19E16712D1558A200E0B856 /* AddToCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E166F2D1558A200E0B856 /* AddToCartViewController.swift */; };
+		A19E16722D1558A200E0B856 /* AddToCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E16702D1558A200E0B856 /* AddToCartViewController.xib */; };
+		A19E16742D15609800E0B856 /* AddToCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E16732D15609800E0B856 /* AddToCartViewModel.swift */; };
+		A19E16762D1560EC00E0B856 /* dishInfor.json in Resources */ = {isa = PBXBuildFile; fileRef = A19E16752D1560EC00E0B856 /* dishInfor.json */; };
+		A19E16792D15641600E0B856 /* dishImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E16772D15641600E0B856 /* dishImageCollectionViewCell.swift */; };
+		A19E167A2D15641600E0B856 /* dishImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E16782D15641600E0B856 /* dishImageCollectionViewCell.xib */; };
+		A19E16802D1BF07500E0B856 /* addToCart.json in Resources */ = {isa = PBXBuildFile; fileRef = A19E167F2D1BF07500E0B856 /* addToCart.json */; };
 		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +178,13 @@
 		A19E16672D114B2C00E0B856 /* PopularItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularItemsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A19E16682D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularItemsCollectionViewCell.xib; sourceTree = "<group>"; };
 		A19E166B2D114E4A00E0B856 /* reviewBrand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = reviewBrand.json; sourceTree = "<group>"; };
+		A19E166F2D1558A200E0B856 /* AddToCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewController.swift; sourceTree = "<group>"; };
+		A19E16702D1558A200E0B856 /* AddToCartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartViewController.xib; sourceTree = "<group>"; };
+		A19E16732D15609800E0B856 /* AddToCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewModel.swift; sourceTree = "<group>"; };
+		A19E16752D1560EC00E0B856 /* dishInfor.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dishInfor.json; sourceTree = "<group>"; };
+		A19E16772D15641600E0B856 /* dishImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A19E16782D15641600E0B856 /* dishImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dishImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		A19E167F2D1BF07500E0B856 /* addToCart.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addToCart.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +239,8 @@
 				A1145BFA2D0C2FF7005DED95 /* popularItems.json */,
 				A1145BF82D0C2FE6005DED95 /* menu.json */,
 				A19E166B2D114E4A00E0B856 /* reviewBrand.json */,
+				A19E16752D1560EC00E0B856 /* dishInfor.json */,
+				A19E167F2D1BF07500E0B856 /* addToCart.json */,
 				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
 				A11FEE8F2CFF64720039400C /* CategoryCollectionViewCell.swift */,
 				A14599762CF840500013D990 /* TabBarController.swift */,
@@ -292,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				A145997C2CFEC37C0013D990 /* Home */,
+				A19E166D2D15583600E0B856 /* DetailVC */,
+				A19E166E2D15587500E0B856 /* AddToCart */,
 			);
 			path = "Food&Drink";
 			sourceTree = "<group>";
@@ -320,19 +338,6 @@
 				A194557A2D095C31008721E9 /* SearchResultViewController.xib */,
 				A19455752D06EE11008721E9 /* SearchTableViewCell.swift */,
 				A19455762D06EE11008721E9 /* SearchTableViewCell.xib */,
-				A19455812D099139008721E9 /* DetailBrandViewController.swift */,
-				A1145BF42D0C2E9E005DED95 /* DetailBrandViewModel.swift */,
-				A19455822D099139008721E9 /* DetailBrandViewController.xib */,
-				A19E16632D114A0F00E0B856 /* PopularItemsTableViewCell.swift */,
-				A19E16642D114A0F00E0B856 /* PopularItemsTableViewCell.xib */,
-				A19E16672D114B2C00E0B856 /* PopularItemsCollectionViewCell.swift */,
-				A19E16682D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib */,
-				A1145BF02D0C1999005DED95 /* MenuTableViewCell.swift */,
-				A1145BF12D0C1999005DED95 /* MenuTableViewCell.xib */,
-				A1145BFC2D101A6B005DED95 /* ReviewTableViewCell.swift */,
-				A1145BFD2D101A6B005DED95 /* ReviewTableViewCell.xib */,
-				A19E165F2D10889200E0B856 /* ImageReviewCollectionViewCell.swift */,
-				A19E16602D10889200E0B856 /* ImageReviewCollectionViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -347,6 +352,38 @@
 				A14186D32D0211610023A6E5 /* seeAllPartner.json */,
 			);
 			path = partner;
+			sourceTree = "<group>";
+		};
+		A19E166D2D15583600E0B856 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				A19455812D099139008721E9 /* DetailBrandViewController.swift */,
+				A1145BF42D0C2E9E005DED95 /* DetailBrandViewModel.swift */,
+				A19455822D099139008721E9 /* DetailBrandViewController.xib */,
+				A19E16632D114A0F00E0B856 /* PopularItemsTableViewCell.swift */,
+				A19E16642D114A0F00E0B856 /* PopularItemsTableViewCell.xib */,
+				A19E16672D114B2C00E0B856 /* PopularItemsCollectionViewCell.swift */,
+				A19E16682D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib */,
+				A1145BF02D0C1999005DED95 /* MenuTableViewCell.swift */,
+				A1145BF12D0C1999005DED95 /* MenuTableViewCell.xib */,
+				A1145BFC2D101A6B005DED95 /* ReviewTableViewCell.swift */,
+				A1145BFD2D101A6B005DED95 /* ReviewTableViewCell.xib */,
+				A19E165F2D10889200E0B856 /* ImageReviewCollectionViewCell.swift */,
+				A19E16602D10889200E0B856 /* ImageReviewCollectionViewCell.xib */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		A19E166E2D15587500E0B856 /* AddToCart */ = {
+			isa = PBXGroup;
+			children = (
+				A19E166F2D1558A200E0B856 /* AddToCartViewController.swift */,
+				A19E16732D15609800E0B856 /* AddToCartViewModel.swift */,
+				A19E16702D1558A200E0B856 /* AddToCartViewController.xib */,
+				A19E16772D15641600E0B856 /* dishImageCollectionViewCell.swift */,
+				A19E16782D15641600E0B856 /* dishImageCollectionViewCell.xib */,
+			);
+			path = AddToCart;
 			sourceTree = "<group>";
 		};
 		D16F85C9451A177F71ABB67F /* Frameworks */ = {
@@ -421,17 +458,21 @@
 				A1145BFF2D101A6B005DED95 /* ReviewTableViewCell.xib in Resources */,
 				A19AB4C32D004A9200725665 /* rate.json in Resources */,
 				A1145BF92D0C2FE6005DED95 /* menu.json in Resources */,
+				A19E16722D1558A200E0B856 /* AddToCartViewController.xib in Resources */,
 				A19E166C2D114E4A00E0B856 /* reviewBrand.json in Resources */,
 				A13FACEC2CFF6BB700AC23FA /* category.json in Resources */,
 				A137F9DB2CF5929300A75DA3 /* CreatAccViewController.xib in Resources */,
 				A1145BFB2D0C2FF7005DED95 /* popularItems.json in Resources */,
+				A19E16802D1BF07500E0B856 /* addToCart.json in Resources */,
 				A137F9E72CF5C32E00A75DA3 /* creatAcc.json in Resources */,
 				A137F9A52CF38CC900A75DA3 /* LaunchScreen.storyboard in Resources */,
 				A19455782D06EE11008721E9 /* SearchTableViewCell.xib in Resources */,
 				A19E16622D10889200E0B856 /* ImageReviewCollectionViewCell.xib in Resources */,
 				A137F9DF2CF593A000A75DA3 /* LoginViewController.xib in Resources */,
 				A19E166A2D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib in Resources */,
+				A19E16762D1560EC00E0B856 /* dishInfor.json in Resources */,
 				A19AB4B92D00186F00725665 /* bestPartners.json in Resources */,
+				A19E167A2D15641600E0B856 /* dishImageCollectionViewCell.xib in Resources */,
 				A1145BF72D0C2FC8005DED95 /* brandDetail.json in Resources */,
 				A19AB4C52D004A9D00725665 /* fast.json in Resources */,
 				A19AB4BD2D003A4600725665 /* BestPartnersTableViewCell.xib in Resources */,
@@ -517,12 +558,14 @@
 				A137F9E12CF59B1F00A75DA3 /* ExtUI.swift in Sources */,
 				A13FACF32CFF7B8800AC23FA /* BestPartnerCollectionViewCell.swift in Sources */,
 				A145997F2CFEC3990013D990 /* HomeViewController.swift in Sources */,
+				A19E16712D1558A200E0B856 /* AddToCartViewController.swift in Sources */,
 				A19E16652D114A0F00E0B856 /* PopularItemsTableViewCell.swift in Sources */,
 				A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */,
 				A11FEE912CFF64720039400C /* CategoryCollectionViewCell.swift in Sources */,
 				A1145BF22D0C1999005DED95 /* MenuTableViewCell.swift in Sources */,
 				A137F9D62CF396C000A75DA3 /* GetStartedViewController.swift in Sources */,
 				A137F9BF2CF38E6800A75DA3 /* UIImageView+Ext.swift in Sources */,
+				A19E16742D15609800E0B856 /* AddToCartViewModel.swift in Sources */,
 				A14186D72D0601F40023A6E5 /* FilterViewController.swift in Sources */,
 				A137F9BE2CF38E6800A75DA3 /* UIStackView+Ext.swift in Sources */,
 				A137F9B92CF38E6800A75DA3 /* UISearchBar+Ext.swift in Sources */,
@@ -538,6 +581,7 @@
 				A19E16612D10889200E0B856 /* ImageReviewCollectionViewCell.swift in Sources */,
 				A137F9EB2CF6E84000A75DA3 /* LoginViewModel.swift in Sources */,
 				A14599782CF840500013D990 /* TabBarController.swift in Sources */,
+				A19E16792D15641600E0B856 /* dishImageCollectionViewCell.swift in Sources */,
 				A137F9BC2CF38E6800A75DA3 /* NavigationBar.swift in Sources */,
 				A19455772D06EE11008721E9 /* SearchTableViewCell.swift in Sources */,
 				A194557B2D095C31008721E9 /* SearchResultViewController.swift in Sources */,

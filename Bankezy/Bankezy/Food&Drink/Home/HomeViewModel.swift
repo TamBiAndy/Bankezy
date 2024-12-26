@@ -85,6 +85,7 @@ class HomeViewModel {
         
         let partnersNearbyDriver = partnersNearbyObv
             .compactMap(\.partners)
+            .debug("DEBUG partnersNearbyDriver")
             .asDriver(onErrorJustReturn: [])
         
         let partnersSalesObv = input.viewDidload
@@ -97,6 +98,7 @@ class HomeViewModel {
         
         let partnersSalesDriver = partnersSalesObv
             .compactMap(\.partners)
+            .debug("DEBUG partnersSalesDriver")
             .asDriver(onErrorJustReturn: [])
         
         let partnersRateObv = input.viewDidload
@@ -109,6 +111,7 @@ class HomeViewModel {
         
         let partnersRateDriver = partnersRateObv
             .compactMap(\.partners)
+            .debug("DEBUG partnersRateDriver")
             .asDriver(onErrorJustReturn: [])
         
         let partnersFastObv = input.viewDidload
@@ -121,6 +124,7 @@ class HomeViewModel {
         
         let partnersFastDriver = partnersFastObv
             .compactMap(\.partners)
+            .debug("DEBUG partnersFastDriver")
             .asDriver(onErrorJustReturn: [])
         
         let partners = Driver.combineLatest(
@@ -130,37 +134,55 @@ class HomeViewModel {
         )
         .map { filterInfo, partnerSelected, nearbyPartners, salesPartners, fastPartners, ratePartners in
             
+            
+            
             switch partnerSelected {
             case .nearby:
-                let filteredPatner = nearbyPartners.filter { partner in
-                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                if let filterInfo {
+                    let filteredPatner = nearbyPartners.filter { partner in
+                        self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                        
+                    }
+                    return filteredPatner
+                } else {
+                    return nearbyPartners
                 }
-                return filteredPatner
+                
             case .sales:
-                let filteredPatner = salesPartners.filter { partner in
-                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                if let filterInfo {
+                    let filteredPatner = salesPartners.filter { partner in
+                        self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                    }
+                    return filteredPatner
+                } else {
+                    return salesPartners
                 }
-                return filteredPatner
-                
             case .fast:
-                let filteredPatner = fastPartners.filter { partner in
-                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                if let filterInfo {
+                    let filteredPatner = fastPartners.filter { partner in
+                        self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                    }
+                    return filteredPatner
+                } else {
+                    return fastPartners
                 }
-                return filteredPatner
-                
             case .rate:
-                let filteredPatner = ratePartners.filter { partner in
-                    self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
-                    self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                if let filterInfo {
+                    let filteredPatner = ratePartners.filter { partner in
+                        self.isValidCategory(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidSortby(partner: partner, filterInfo: filterInfo) &&
+                        self.isValidPrice(partner: partner, filterInfo: filterInfo)
+                    }
+                    return filteredPatner
+                } else {
+                    return ratePartners
                 }
-                return filteredPatner
             }
         }
         
@@ -205,7 +227,7 @@ extension HomeViewModel {
     struct Input {
         let viewDidload: Observable<Void>
         let parterSelected: Observable<Partner>
-        let filterInfo: Observable<FilterInfo>
+        let filterInfo: Observable<FilterInfo?>
     }
     
     struct Output {

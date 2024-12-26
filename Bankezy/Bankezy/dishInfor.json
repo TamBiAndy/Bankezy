@@ -1,0 +1,13 @@
+{
+  "id": "1234",
+  "title": "Extreme cheese whopper JR",
+  "description": "A signature flame-grilled beef patty topped with smoked bacon.",
+  "size": ["S", "M", "L"],
+  "image": [
+  "https://images.pexels.com/photos/15076700/pexels-photo-15076700/free-photo-of-burger.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/10671449/pexels-photo-10671449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/29250659/pexels-photo-29250659/free-photo-of-juicy-burger-with-melted-cheddar-cheese.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/28966660/pexels-photo-28966660/free-photo-of-delicious-bacon-cheeseburgers-with-fresh-lettuce.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  ],
+  "price": 5.99
+}

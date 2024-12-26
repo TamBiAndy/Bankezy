@@ -28,9 +28,8 @@ class PopularItemsTableViewCell: UITableViewCell {
         flowlayout.minimumInteritemSpacing = 0
         return flowlayout
     }()
-//    var model: ViewState?
     
-//    var viewModel: DetailBrandViewModel
+    var selectedItem: ((PopularItemResponse.PopularItem) -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -52,19 +51,13 @@ class PopularItemsTableViewCell: UITableViewCell {
                       cell.bind(with: item)
                   }
                   .disposed(by: rx.disposeBag)
+        
+        popularItemsCollectionView.rx.modelSelected(PopularItemResponse.PopularItem.self)
+            .bind(onNext: { item in
+                self.selectedItem?(item)
+            })
+            .disposed(by: rx.disposeBag)
     }
-    
-//    func bindData(with viewState: ViewState) {
-//        self.model = viewState
-//        
-//
-//            viewState.popularItems
-//            .bind(to: popularItemsCollectionView.rx.items(cellIdentifier: "PopularItemsCollectionViewCell", cellType: PopularItemsCollectionViewCell.self)) { index, item, cell in
-//                cell.bind(with: item)
-//            }
-//            .disposed(by: rx.disposeBag)
-//            
-//    }
     
     private func setupView() {
         let nibCell = UINib(nibName: "PopularItemsCollectionViewCell", bundle: nil)
@@ -72,8 +65,8 @@ class PopularItemsTableViewCell: UITableViewCell {
         popularItemsCollectionView.collectionViewLayout = flowLayout
         popularItemsCollectionView.showsHorizontalScrollIndicator = false
         
-        let nibcell = UINib(nibName: "PopularItemsTableViewCell", bundle: nil)
-        popularItemsCollectionView.register(nibcell, forCellWithReuseIdentifier: "PopularItemsTableViewCell")
+//        let nibcell = UINib(nibName: "PopularItemsTableViewCell", bundle: nil)
+//        popularItemsCollectionView.register(nibcell, forCellWithReuseIdentifier: "PopularItemsTableViewCell")
     }
     
 }

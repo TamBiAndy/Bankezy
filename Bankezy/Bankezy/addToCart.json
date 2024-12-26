@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "Item added to cart",
+  "cart": {
+        "id": "12345",
+        "name": "Product Name",
+        "size": "M",
+        "qty": 2,
+        "price": 50,
+        "totalPrice": 100
+
+  }
+}

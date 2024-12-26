@@ -10,7 +10,7 @@ import UIKit
 extension UIFont {
     
     static func bold(size: CGFloat) -> UIFont {
-        .init(name: "Damascus", size: size)!
+        .init(name: "DMSans-bold", size: size)!
     }
     
     static func italic(size: CGFloat) -> UIFont {
@@ -22,7 +22,7 @@ extension UIFont {
     }
     
     static func medium(size: CGFloat) -> UIFont {
-        .init(name: "DMSans-Medium", size: size)!
+        .init(name: "DamascusMedium", size: size)!
     }
     
     static func light(size: CGFloat) -> UIFont {

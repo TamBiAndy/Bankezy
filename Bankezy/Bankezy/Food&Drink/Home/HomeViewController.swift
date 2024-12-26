@@ -74,7 +74,7 @@ class HomeViewController: UIViewController {
     
     //MARK: Variables
     var viewModel: HomeViewModel
-    let filterInfoSubject = PublishSubject<FilterInfo>()
+    let filterInfoSubject = PublishSubject<FilterInfo?>()
 //    @IBOutlet weak var bestPartnersTableViewHeight: NSLayoutConstraint!
     
     //MARK: Initializers
@@ -107,7 +107,7 @@ class HomeViewController: UIViewController {
             btnFast.rx.tap.mapTo(Partner.fast).asObservable()
         ).startWith(Partner.nearby)
             
-        let partnerSelectedDriver = parterSelected
+        parterSelected
             .bind(onNext: { parterSelected in
                 switch parterSelected {
                 case .nearby:
@@ -162,7 +162,7 @@ class HomeViewController: UIViewController {
         let input = HomeViewModel.Input(
             viewDidload: .just(()),
             parterSelected: parterSelected,
-            filterInfo: filterInfoSubject.asObservable()
+            filterInfo: filterInfoSubject.startWith(nil).asObservable()
         )
         
         let output = viewModel.transfer(input: input)
