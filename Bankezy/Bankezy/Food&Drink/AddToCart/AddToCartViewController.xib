@@ -71,14 +71,15 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="wyH-22-pgS">
-                    <rect key="frame" x="0.0" y="432" width="393" height="50"/>
+                    <rect key="frame" x="96.666666666666686" y="432" width="200" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="DT9-Xx-j5w"/>
+                        <constraint firstAttribute="height" constant="40" id="DT9-Xx-j5w"/>
+                        <constraint firstAttribute="width" constant="200" placeholder="YES" id="xKf-Zw-IAW"/>
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ohq-xQ-3vu">
-                    <rect key="frame" x="120" y="539" width="153" height="40"/>
+                    <rect key="frame" x="120" y="529" width="153" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyt-65-icF">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -178,9 +179,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qjF-Lu-gcG" secondAttribute="bottom" constant="35" id="cal-41-CLg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qjF-Lu-gcG" secondAttribute="trailing" constant="35" id="gBK-BF-9fF"/>
                 <constraint firstItem="wyH-22-pgS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gqh-eC-f2b"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wyH-22-pgS" secondAttribute="trailing" id="lLB-Vw-cEp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wyH-22-pgS" secondAttribute="trailing" priority="250" id="lLB-Vw-cEp"/>
                 <constraint firstItem="xqg-2N-Ve3" firstAttribute="top" secondItem="vAJ-al-CTm" secondAttribute="bottom" constant="36" id="pXj-mq-75A"/>
-                <constraint firstItem="wyH-22-pgS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uCs-9g-TOO"/>
+                <constraint firstItem="wyH-22-pgS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" priority="250" id="uCs-9g-TOO"/>
                 <constraint firstItem="7Vh-xF-Aq6" firstAttribute="top" secondItem="1iW-NM-0XL" secondAttribute="bottom" constant="33" id="uPk-8c-5W3"/>
                 <constraint firstItem="ohq-xQ-3vu" firstAttribute="top" secondItem="wyH-22-pgS" secondAttribute="bottom" constant="57" id="wK8-WH-nW2"/>
             </constraints>

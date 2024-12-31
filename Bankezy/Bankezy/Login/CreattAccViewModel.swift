@@ -203,7 +203,7 @@ class CreattAccViewModel {
     }
 }
 
-struct ErrorModel: Codable, LocalizedError {
+struct ErrorModel: Codable, LocalizedError, Error {
     let code: Int
     let message: String?
     let title: String?

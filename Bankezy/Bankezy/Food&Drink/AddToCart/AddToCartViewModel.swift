@@ -66,10 +66,9 @@ class AddToCartViewModel {
                         if (200...299).contains(response.statusCode) {
                             return true
                         } else {
-                            let errorModel = try? JSONDecoder().decode(ErrorModel.self, from: response.data)
-//                            throw errorModel
+                            let errorModel = try JSONDecoder().decode(ErrorModel.self, from: response.data)
+                            throw errorModel
                         }
-                        return false
                     }
                     .trackError(errorTracker)
             }

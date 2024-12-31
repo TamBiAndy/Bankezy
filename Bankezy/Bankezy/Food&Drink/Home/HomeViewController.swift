@@ -280,7 +280,15 @@ class HomeViewController: UIViewController {
     
     private func setupSearchBar() {
         navigationItem.titleView = searchBar
-        
+        let rightButton = UIBarButtonItem(image: UIImage(named: "ic_cart"), style: .plain, target: self, action: #selector(goToCart))
+        navigationItem.rightBarButtonItem = rightButton
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(hexString: "172B4D")
+    }
+    
+    @objc func goToCart() {
+        let viewModel = ConfirmOrderViewModel()
+        let cartVc = ConfirmOrderViewController(viewModel: viewModel)
+        navigationController?.pushViewController(cartVc, animated: true)
     }
     
     override func viewDidLayoutSubviews() {

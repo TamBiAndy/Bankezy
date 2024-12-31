@@ -88,6 +88,23 @@
 		A19E16792D15641600E0B856 /* dishImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E16772D15641600E0B856 /* dishImageCollectionViewCell.swift */; };
 		A19E167A2D15641600E0B856 /* dishImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E16782D15641600E0B856 /* dishImageCollectionViewCell.xib */; };
 		A19E16802D1BF07500E0B856 /* addToCart.json in Resources */ = {isa = PBXBuildFile; fileRef = A19E167F2D1BF07500E0B856 /* addToCart.json */; };
+		A19E16842D1D35C900E0B856 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E16822D1D35C900E0B856 /* ConfirmOrderViewController.swift */; };
+		A19E16852D1D35C900E0B856 /* ConfirmOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19E16832D1D35C900E0B856 /* ConfirmOrderViewController.xib */; };
+		A1DD79B82D1D4E4400C601B7 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79B62D1D4E4400C601B7 /* OrderTableViewCell.swift */; };
+		A1DD79B92D1D4E4400C601B7 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79B72D1D4E4400C601B7 /* OrderTableViewCell.xib */; };
+		A1DD79BB2D1D532A00C601B7 /* ConfirmOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79BA2D1D532A00C601B7 /* ConfirmOrderViewModel.swift */; };
+		A1DD79BF2D1D54A700C601B7 /* confirmOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79BE2D1D54A700C601B7 /* confirmOrder.json */; };
+		A1DD79C22D1E759400C601B7 /* AddPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79C02D1E759400C601B7 /* AddPaymentMethodViewController.swift */; };
+		A1DD79C32D1E759400C601B7 /* AddPaymentMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79C12D1E759400C601B7 /* AddPaymentMethodViewController.xib */; };
+		A1DD79C52D1E8C9C00C601B7 /* AddPaymentMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79C42D1E8C9C00C601B7 /* AddPaymentMethodViewModel.swift */; };
+		A1DD79CA2D23052700C601B7 /* ResultOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79C82D23052700C601B7 /* ResultOrderViewController.swift */; };
+		A1DD79CC2D23139100C601B7 /* DMSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599832CFEF5800013D990 /* DMSans-Light.ttf */; };
+		A1DD79CD2D23139100C601B7 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599812CFEF5800013D990 /* DMSans-Regular.ttf */; };
+		A1DD79CE2D23139100C601B7 /* DMSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599822CFEF5800013D990 /* DMSans-SemiBold.ttf */; };
+		A1DD79CF2D23139100C601B7 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599852CFEF5800013D990 /* DMSans-Bold.ttf */; };
+		A1DD79D02D23139100C601B7 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599872CFEF5800013D990 /* DMSans-Italic.ttf */; };
+		A1DD79D12D23139100C601B7 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599862CFEF5800013D990 /* DMSans-Thin.ttf */; };
+		A1DD79D22D23139100C601B7 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599842CFEF5800013D990 /* DMSans-Medium.ttf */; };
 		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +202,16 @@
 		A19E16772D15641600E0B856 /* dishImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A19E16782D15641600E0B856 /* dishImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dishImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		A19E167F2D1BF07500E0B856 /* addToCart.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addToCart.json; sourceTree = "<group>"; };
+		A19E16822D1D35C900E0B856 /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
+		A19E16832D1D35C900E0B856 /* ConfirmOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmOrderViewController.xib; sourceTree = "<group>"; };
+		A1DD79B62D1D4E4400C601B7 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		A1DD79B72D1D4E4400C601B7 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		A1DD79BA2D1D532A00C601B7 /* ConfirmOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewModel.swift; sourceTree = "<group>"; };
+		A1DD79BE2D1D54A700C601B7 /* confirmOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = confirmOrder.json; sourceTree = "<group>"; };
+		A1DD79C02D1E759400C601B7 /* AddPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodViewController.swift; sourceTree = "<group>"; };
+		A1DD79C12D1E759400C601B7 /* AddPaymentMethodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPaymentMethodViewController.xib; sourceTree = "<group>"; };
+		A1DD79C42D1E8C9C00C601B7 /* AddPaymentMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodViewModel.swift; sourceTree = "<group>"; };
+		A1DD79C82D23052700C601B7 /* ResultOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +268,7 @@
 				A19E166B2D114E4A00E0B856 /* reviewBrand.json */,
 				A19E16752D1560EC00E0B856 /* dishInfor.json */,
 				A19E167F2D1BF07500E0B856 /* addToCart.json */,
+				A1DD79BE2D1D54A700C601B7 /* confirmOrder.json */,
 				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
 				A11FEE8F2CFF64720039400C /* CategoryCollectionViewCell.swift */,
 				A14599762CF840500013D990 /* TabBarController.swift */,
@@ -310,6 +338,7 @@
 				A145997C2CFEC37C0013D990 /* Home */,
 				A19E166D2D15583600E0B856 /* DetailVC */,
 				A19E166E2D15587500E0B856 /* AddToCart */,
+				A19E16812D1D358E00E0B856 /* ConfirmOrder */,
 			);
 			path = "Food&Drink";
 			sourceTree = "<group>";
@@ -386,6 +415,22 @@
 			path = AddToCart;
 			sourceTree = "<group>";
 		};
+		A19E16812D1D358E00E0B856 /* ConfirmOrder */ = {
+			isa = PBXGroup;
+			children = (
+				A19E16822D1D35C900E0B856 /* ConfirmOrderViewController.swift */,
+				A1DD79BA2D1D532A00C601B7 /* ConfirmOrderViewModel.swift */,
+				A19E16832D1D35C900E0B856 /* ConfirmOrderViewController.xib */,
+				A1DD79C82D23052700C601B7 /* ResultOrderViewController.swift */,
+				A1DD79B62D1D4E4400C601B7 /* OrderTableViewCell.swift */,
+				A1DD79B72D1D4E4400C601B7 /* OrderTableViewCell.xib */,
+				A1DD79C02D1E759400C601B7 /* AddPaymentMethodViewController.swift */,
+				A1DD79C42D1E8C9C00C601B7 /* AddPaymentMethodViewModel.swift */,
+				A1DD79C12D1E759400C601B7 /* AddPaymentMethodViewController.xib */,
+			);
+			path = ConfirmOrder;
+			sourceTree = "<group>";
+		};
 		D16F85C9451A177F71ABB67F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,13 +500,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1145BF32D0C1999005DED95 /* MenuTableViewCell.xib in Resources */,
+				A1DD79D12D23139100C601B7 /* DMSans-Thin.ttf in Resources */,
+				A1DD79CF2D23139100C601B7 /* DMSans-Bold.ttf in Resources */,
 				A1145BFF2D101A6B005DED95 /* ReviewTableViewCell.xib in Resources */,
 				A19AB4C32D004A9200725665 /* rate.json in Resources */,
 				A1145BF92D0C2FE6005DED95 /* menu.json in Resources */,
 				A19E16722D1558A200E0B856 /* AddToCartViewController.xib in Resources */,
 				A19E166C2D114E4A00E0B856 /* reviewBrand.json in Resources */,
+				A1DD79B92D1D4E4400C601B7 /* OrderTableViewCell.xib in Resources */,
 				A13FACEC2CFF6BB700AC23FA /* category.json in Resources */,
+				A19E16852D1D35C900E0B856 /* ConfirmOrderViewController.xib in Resources */,
 				A137F9DB2CF5929300A75DA3 /* CreatAccViewController.xib in Resources */,
+				A1DD79D02D23139100C601B7 /* DMSans-Italic.ttf in Resources */,
+				A1DD79BF2D1D54A700C601B7 /* confirmOrder.json in Resources */,
 				A1145BFB2D0C2FF7005DED95 /* popularItems.json in Resources */,
 				A19E16802D1BF07500E0B856 /* addToCart.json in Resources */,
 				A137F9E72CF5C32E00A75DA3 /* creatAcc.json in Resources */,
@@ -471,15 +522,20 @@
 				A137F9DF2CF593A000A75DA3 /* LoginViewController.xib in Resources */,
 				A19E166A2D114B2C00E0B856 /* PopularItemsCollectionViewCell.xib in Resources */,
 				A19E16762D1560EC00E0B856 /* dishInfor.json in Resources */,
+				A1DD79C32D1E759400C601B7 /* AddPaymentMethodViewController.xib in Resources */,
+				A1DD79CE2D23139100C601B7 /* DMSans-SemiBold.ttf in Resources */,
 				A19AB4B92D00186F00725665 /* bestPartners.json in Resources */,
 				A19E167A2D15641600E0B856 /* dishImageCollectionViewCell.xib in Resources */,
 				A1145BF72D0C2FC8005DED95 /* brandDetail.json in Resources */,
+				A1DD79CC2D23139100C601B7 /* DMSans-Light.ttf in Resources */,
 				A19AB4C52D004A9D00725665 /* fast.json in Resources */,
 				A19AB4BD2D003A4600725665 /* BestPartnersTableViewCell.xib in Resources */,
 				A19455742D06E599008721E9 /* sortbyTableViewCell.xib in Resources */,
 				A19AB4BF2D004A6D00725665 /* nearby.json in Resources */,
 				A14186D82D0601F40023A6E5 /* FilterViewController.xib in Resources */,
 				A137F9A22CF38CC900A75DA3 /* Assets.xcassets in Resources */,
+				A1DD79CD2D23139100C601B7 /* DMSans-Regular.ttf in Resources */,
+				A1DD79D22D23139100C601B7 /* DMSans-Medium.ttf in Resources */,
 				A137F9ED2CF6F6A200A75DA3 /* login.json in Resources */,
 				A13FACF42CFF7B8800AC23FA /* BestPartnerCollectionViewCell.xib in Resources */,
 				A19E16662D114A0F00E0B856 /* PopularItemsTableViewCell.xib in Resources */,
@@ -550,16 +606,21 @@
 				A19E16692D114B2C00E0B856 /* PopularItemsCollectionViewCell.swift in Sources */,
 				A19455832D099139008721E9 /* DetailBrandViewController.swift in Sources */,
 				A137F9DE2CF593A000A75DA3 /* LoginViewController.swift in Sources */,
+				A1DD79BB2D1D532A00C601B7 /* ConfirmOrderViewModel.swift in Sources */,
+				A1DD79B82D1D4E4400C601B7 /* OrderTableViewCell.swift in Sources */,
 				A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */,
 				A1145BF52D0C2E9E005DED95 /* DetailBrandViewModel.swift in Sources */,
+				A19E16842D1D35C900E0B856 /* ConfirmOrderViewController.swift in Sources */,
 				A14186D22D00D06B0023A6E5 /* BestPartnerAllViewModel.swift in Sources */,
 				A137F9E92CF5C38100A75DA3 /* APITarget.swift in Sources */,
 				A13FACEA2CFF6A9F00AC23FA /* HomeViewModel.swift in Sources */,
+				A1DD79C52D1E8C9C00C601B7 /* AddPaymentMethodViewModel.swift in Sources */,
 				A137F9E12CF59B1F00A75DA3 /* ExtUI.swift in Sources */,
 				A13FACF32CFF7B8800AC23FA /* BestPartnerCollectionViewCell.swift in Sources */,
 				A145997F2CFEC3990013D990 /* HomeViewController.swift in Sources */,
 				A19E16712D1558A200E0B856 /* AddToCartViewController.swift in Sources */,
 				A19E16652D114A0F00E0B856 /* PopularItemsTableViewCell.swift in Sources */,
+				A1DD79CA2D23052700C601B7 /* ResultOrderViewController.swift in Sources */,
 				A137F9C02CF38E6800A75DA3 /* Withable.swift in Sources */,
 				A11FEE912CFF64720039400C /* CategoryCollectionViewCell.swift in Sources */,
 				A1145BF22D0C1999005DED95 /* MenuTableViewCell.swift in Sources */,
@@ -574,6 +635,7 @@
 				A137F9BB2CF38E6800A75DA3 /* UIFont+Ext.swift in Sources */,
 				A19455732D06E599008721E9 /* sortbyTableViewCell.swift in Sources */,
 				A137F9C12CF38E6800A75DA3 /* UIButton+Ext.swift in Sources */,
+				A1DD79C22D1E759400C601B7 /* AddPaymentMethodViewController.swift in Sources */,
 				A14186CF2D00CEA80023A6E5 /* BestPartnersAllViewController.swift in Sources */,
 				A19455702D06D635008721E9 /* FilterViewModel.swift in Sources */,
 				A137F9DA2CF5929300A75DA3 /* CreatAccViewController.swift in Sources */,

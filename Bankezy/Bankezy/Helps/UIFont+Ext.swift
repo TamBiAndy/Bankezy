@@ -10,23 +10,19 @@ import UIKit
 extension UIFont {
     
     static func bold(size: CGFloat) -> UIFont {
-        .init(name: "DMSans-bold", size: size)!
+        .init(name: "DMSans-Bold", size: size)!
     }
     
     static func italic(size: CGFloat) -> UIFont {
         .init(name: "DMSans-Italic", size: size)!
     }
     
-    static func regular(size: CGFloat) -> UIFont {
-        .init(name: "Damascus", size: size)!
-    }
-    
     static func medium(size: CGFloat) -> UIFont {
-        .init(name: "DamascusMedium", size: size)!
+        .init(name: "DMSans-Medium", size: size)!
     }
     
-    static func light(size: CGFloat) -> UIFont {
-        .init(name: "DMSans-Light", size: size)!
+    static func regular(size: CGFloat) -> UIFont {
+        .init(name: "DMSans-Regular", size: size)!
     }
     
     static func semiBold(size: CGFloat) -> UIFont {

@@ -17,11 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09B-h0-I9n">
-                        <rect key="frame" x="30" y="0.0" width="250" height="197"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="250" id="kmr-30-qCr"/>
-                            <constraint firstAttribute="height" constant="197" id="me9-UX-TjC"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="197"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="15"/>
@@ -33,10 +29,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="09B-h0-I9n" secondAttribute="bottom" id="DYF-XX-USa"/>
-                <constraint firstItem="09B-h0-I9n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hVr-t9-Tyb"/>
-                <constraint firstItem="09B-h0-I9n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="qmk-mT-9Iu"/>
-                <constraint firstAttribute="trailing" secondItem="09B-h0-I9n" secondAttribute="trailing" id="tHd-dV-8Rd"/>
+                <constraint firstAttribute="bottom" secondItem="09B-h0-I9n" secondAttribute="bottom" id="0cO-xL-fy8"/>
+                <constraint firstAttribute="trailing" secondItem="09B-h0-I9n" secondAttribute="trailing" id="5e5-OR-C9p"/>
+                <constraint firstItem="09B-h0-I9n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9o8-Dj-x7i"/>
+                <constraint firstItem="09B-h0-I9n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="run-gH-IaF"/>
             </constraints>
             <connections>
                 <outlet property="dishImage" destination="09B-h0-I9n" id="uBE-Ez-g28"/>

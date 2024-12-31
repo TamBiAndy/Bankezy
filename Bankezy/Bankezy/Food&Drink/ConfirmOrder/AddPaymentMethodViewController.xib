@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Medium.ttf">
+            <string>DMSans-Medium</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPaymentMethodViewController" customModule="Bankezy" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAddCard" destination="lcD-Lw-aRv" id="7gk-b9-cAC"/>
+                <outlet property="btnScanCard" destination="EJM-Ra-Ebz" id="it3-fW-xJy"/>
+                <outlet property="tfCVCNumber" destination="TZq-de-P0j" id="fzC-lt-3Fp"/>
+                <outlet property="tfCardNumber" destination="wCC-dZ-iJp" id="Ect-Mb-EzH"/>
+                <outlet property="tfDateExpire" destination="FgY-jh-m90" id="QCz-be-mNt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Add your payment methods" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xU-RS-4dQ">
+                    <rect key="frame" x="0.0" y="40" width="393" height="21"/>
+                    <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="16"/>
+                    <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ7-U9-58F">
+                    <rect key="frame" x="0.0" y="85" width="393" height="1"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="LwM-Fs-jVt"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r1U-F5-ad0">
+                    <rect key="frame" x="35" y="110" width="323" height="673"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCC-dZ-iJp">
+                            <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
+                            <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="vSq-AU-4kG"/>
+                            </constraints>
+                            <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Wc-9L-Vve">
+                            <rect key="frame" x="0.0" y="44" width="323" height="44"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgY-jh-m90" userLabel="Date">
+                                    <rect key="frame" x="0.0" y="0.0" width="154" height="44"/>
+                                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="ET5-GQ-Ynf"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZq-de-P0j" userLabel="CVC Number">
+                                    <rect key="frame" x="169" y="0.0" width="154" height="44"/>
+                                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="yZD-dA-0Be"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="TZq-de-P0j" firstAttribute="width" secondItem="FgY-jh-m90" secondAttribute="width" id="9Ur-UB-hiC"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="spacingAbove">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcD-Lw-aRv">
+                            <rect key="frame" x="0.0" y="88" width="323" height="44"/>
+                            <color key="backgroundColor" red="0.93725490196078431" green="0.62352941176470589" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="FEq-4f-gYZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Add Card">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="spacingAbove">
+                                    <real key="value" value="32"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJM-Ra-Ebz" userLabel="Scan Card">
+                            <rect key="frame" x="0.0" y="132" width="323" height="44"/>
+                            <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Jnq-JB-ise"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Scan Card">
+                                <color key="titleColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="spacingAbove">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smM-pe-GMt">
+                            <rect key="frame" x="0.0" y="176" width="323" height="497"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="r1U-F5-ad0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="1NO-ws-AeJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r1U-F5-ad0" secondAttribute="bottom" constant="35" id="2qt-wG-hyQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9xU-RS-4dQ" secondAttribute="trailing" id="C6J-20-Sw9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KQ7-U9-58F" secondAttribute="trailing" id="H8q-il-Izx"/>
+                <constraint firstItem="9xU-RS-4dQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uaa-te-MIQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r1U-F5-ad0" secondAttribute="trailing" constant="35" id="Ym1-bZ-ss5"/>
+                <constraint firstItem="r1U-F5-ad0" firstAttribute="top" secondItem="KQ7-U9-58F" secondAttribute="bottom" constant="24" id="eyo-t8-bsW"/>
+                <constraint firstItem="9xU-RS-4dQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gh3-2h-qoL"/>
+                <constraint firstItem="KQ7-U9-58F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hHY-rk-11M"/>
+                <constraint firstItem="KQ7-U9-58F" firstAttribute="top" secondItem="9xU-RS-4dQ" secondAttribute="bottom" constant="24" id="lYy-cs-FCv"/>
+                <constraint firstItem="9xU-RS-4dQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="wHE-JN-6ha"/>
+            </constraints>
+            <point key="canvasLocation" x="74" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

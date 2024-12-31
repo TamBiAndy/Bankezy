@@ -100,18 +100,11 @@ class AddToCartViewController: UIViewController {
             .disposed(by: rx.disposeBag)
         
         selectedSize
-            .bind(onNext: { newButton in
+            .bind(onNext: { selectedButton in
                 
                 self.sizeHstack.arrangedSubviews.forEach { view in
-                    if let button = view as? UIButton, button != newButton {
-//                        button.isSelected = false
-                        button.backgroundColor = .white
-                    }
-                }
-                
-                if let button = newButton {
-                    button.isSelected.toggle()
-                    if button.isSelected {
+                    guard let button = view as? UIButton else { return }
+                    if button === selectedButton {
                         button.backgroundColor = UIColor(hexString: "FFC400")
                     } else {
                         button.backgroundColor = .white
@@ -141,7 +134,7 @@ class AddToCartViewController: UIViewController {
         
         output.addToCart
             .drive(onNext: { isSuccess in
-                self.dismiss(animated: true)
+                self.navigationController?.popViewController(animated: true)
                 
             })
             .disposed(by: rx.disposeBag)
@@ -156,10 +149,10 @@ class AddToCartViewController: UIViewController {
     
     private func setupView() {
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumLineSpacing = -50
+        flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.itemSize = CGSize(
-            width: dishImageCollectionView!.frame.width,
+            width: dishImageCollectionView!.frame.width - 60,
             height: dishImageCollectionView!.frame.height
         )
         dishImageCollectionView.collectionViewLayout = flowLayout
@@ -178,9 +171,20 @@ class AddToCartViewController: UIViewController {
             btnSize.titleLabel?.font = .medium(size: 16)
             btnSize.layer.cornerRadius = 14
             btnSize.applyShadowForButton(color: UIColor(hexString: "1F1B11"), alpha: 0.13, width: 0, height: 7, radius: 30)
-            
             btnSize.snp.makeConstraints { make in
                 make.width.height.equalTo(40)
+            }
+            
+            var config = UIButton.Configuration.plain()
+            config.title = size
+            config.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0) // Padding
+            btnSize.configuration = config
+            btnSize.configurationUpdateHandler = { button in
+                var updatedConfig = button.configuration
+                
+                updatedConfig?.baseBackgroundColor = .white
+                
+                button.configuration = updatedConfig
             }
             
             btnSize.rx.tap

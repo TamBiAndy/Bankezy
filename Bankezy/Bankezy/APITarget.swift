@@ -26,6 +26,8 @@ enum APITarget: TargetType {
     case getReviewBrand
     case getDishInfor
     case addToCart(id: String?, size: String?, qty: String?)
+    case orderItemsInfor
+    case addPaymentMethod(cardNumber: String?, expireDate: String?, cvcNumber: String?)
     
     var baseURL: URL {
         return URL(string: "https://f3fb93b6-d607-4da3-abeb-2312a3ab8bff.mock.pstmn.io")!
@@ -65,14 +67,18 @@ enum APITarget: TargetType {
             return "/dishInfor"
         case .addToCart:
             return "/addToCart"
+        case .orderItemsInfor:
+            return "/confirmOrder"
+        case .addPaymentMethod:
+            return "/addPaymentMethod"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .creatAcc, .login, .addToCart:
+        case .creatAcc, .login, .addToCart, .addPaymentMethod:
             return .post
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor:
             return .get
         }
     }
@@ -87,13 +93,19 @@ enum APITarget: TargetType {
             return .requestParameters(parameters: ["email": email,
                                                    "password": password,
                                                    "autoLogin": autoLogin], encoding: JSONEncoding.default)
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
             
         case .addToCart(let id, let size, let qty):
             return .requestParameters(parameters: ["id": id ?? "",
                                                    "size": size ?? "",
                                                    "qty": qty ?? ""], encoding: JSONEncoding.default)
+        case .addPaymentMethod(let cardNumber, let expireDate, let cvcNumber):
+            return .requestParameters(
+                parameters: [ "cardNumber": cardNumber ?? "",
+                              "expireDate": expireDate ?? "",
+                              "cvcNumber": cvcNumber ?? ""
+                            ], encoding: JSONEncoding.default)
         }
     }
     
