@@ -105,6 +105,11 @@
 		A1DD79D02D23139100C601B7 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599872CFEF5800013D990 /* DMSans-Italic.ttf */; };
 		A1DD79D12D23139100C601B7 /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599862CFEF5800013D990 /* DMSans-Thin.ttf */; };
 		A1DD79D22D23139100C601B7 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14599842CFEF5800013D990 /* DMSans-Medium.ttf */; };
+		A1DD79D62D23AFDA00C601B7 /* DeliveryOnGoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79D42D23AFDA00C601B7 /* DeliveryOnGoingViewController.swift */; };
+		A1DD79D72D23AFDA00C601B7 /* DeliveryOnGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79D52D23AFDA00C601B7 /* DeliveryOnGoingViewController.xib */; };
+		A1DD79D92D26698100C601B7 /* DeliveryStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79D82D26698100C601B7 /* DeliveryStatus.json */; };
+		A1DD79DB2D266B1700C601B7 /* DeliveryStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79DA2D266B1700C601B7 /* DeliveryStatusViewModel.swift */; };
+		A1DD79DF2D34E98C00C601B7 /* submitOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79DE2D34E98C00C601B7 /* submitOrder.json */; };
 		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
 /* End PBXBuildFile section */
 
@@ -212,6 +217,11 @@
 		A1DD79C12D1E759400C601B7 /* AddPaymentMethodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPaymentMethodViewController.xib; sourceTree = "<group>"; };
 		A1DD79C42D1E8C9C00C601B7 /* AddPaymentMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodViewModel.swift; sourceTree = "<group>"; };
 		A1DD79C82D23052700C601B7 /* ResultOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOrderViewController.swift; sourceTree = "<group>"; };
+		A1DD79D42D23AFDA00C601B7 /* DeliveryOnGoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOnGoingViewController.swift; sourceTree = "<group>"; };
+		A1DD79D52D23AFDA00C601B7 /* DeliveryOnGoingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryOnGoingViewController.xib; sourceTree = "<group>"; };
+		A1DD79D82D26698100C601B7 /* DeliveryStatus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeliveryStatus.json; sourceTree = "<group>"; };
+		A1DD79DA2D266B1700C601B7 /* DeliveryStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryStatusViewModel.swift; sourceTree = "<group>"; };
+		A1DD79DE2D34E98C00C601B7 /* submitOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = submitOrder.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +279,8 @@
 				A19E16752D1560EC00E0B856 /* dishInfor.json */,
 				A19E167F2D1BF07500E0B856 /* addToCart.json */,
 				A1DD79BE2D1D54A700C601B7 /* confirmOrder.json */,
+				A1DD79D82D26698100C601B7 /* DeliveryStatus.json */,
+				A1DD79DE2D34E98C00C601B7 /* submitOrder.json */,
 				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
 				A11FEE8F2CFF64720039400C /* CategoryCollectionViewCell.swift */,
 				A14599762CF840500013D990 /* TabBarController.swift */,
@@ -339,6 +351,7 @@
 				A19E166D2D15583600E0B856 /* DetailVC */,
 				A19E166E2D15587500E0B856 /* AddToCart */,
 				A19E16812D1D358E00E0B856 /* ConfirmOrder */,
+				A1DD79D32D23AFB200C601B7 /* DeliveryOnGoing */,
 			);
 			path = "Food&Drink";
 			sourceTree = "<group>";
@@ -431,6 +444,16 @@
 			path = ConfirmOrder;
 			sourceTree = "<group>";
 		};
+		A1DD79D32D23AFB200C601B7 /* DeliveryOnGoing */ = {
+			isa = PBXGroup;
+			children = (
+				A1DD79D42D23AFDA00C601B7 /* DeliveryOnGoingViewController.swift */,
+				A1DD79DA2D266B1700C601B7 /* DeliveryStatusViewModel.swift */,
+				A1DD79D52D23AFDA00C601B7 /* DeliveryOnGoingViewController.xib */,
+			);
+			path = DeliveryOnGoing;
+			sourceTree = "<group>";
+		};
 		D16F85C9451A177F71ABB67F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +474,7 @@
 				A137F9922CF38CC800A75DA3 /* Frameworks */,
 				A137F9932CF38CC800A75DA3 /* Resources */,
 				79CDED45FD048F0DB2692F25 /* [CP] Embed Pods Frameworks */,
+				418E01AD37B31D62757BD1FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,11 +523,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DD79D92D26698100C601B7 /* DeliveryStatus.json in Resources */,
 				A1145BF32D0C1999005DED95 /* MenuTableViewCell.xib in Resources */,
 				A1DD79D12D23139100C601B7 /* DMSans-Thin.ttf in Resources */,
 				A1DD79CF2D23139100C601B7 /* DMSans-Bold.ttf in Resources */,
 				A1145BFF2D101A6B005DED95 /* ReviewTableViewCell.xib in Resources */,
 				A19AB4C32D004A9200725665 /* rate.json in Resources */,
+				A1DD79DF2D34E98C00C601B7 /* submitOrder.json in Resources */,
 				A1145BF92D0C2FE6005DED95 /* menu.json in Resources */,
 				A19E16722D1558A200E0B856 /* AddToCartViewController.xib in Resources */,
 				A19E166C2D114E4A00E0B856 /* reviewBrand.json in Resources */,
@@ -543,6 +569,7 @@
 				A19455842D099139008721E9 /* DetailBrandViewController.xib in Resources */,
 				A137F9D72CF396C000A75DA3 /* GetStartedViewController.xib in Resources */,
 				A19AB4C12D004A8600725665 /* sales.json in Resources */,
+				A1DD79D72D23AFDA00C601B7 /* DeliveryOnGoingViewController.xib in Resources */,
 				A194557C2D095C31008721E9 /* SearchResultViewController.xib in Resources */,
 				A14599802CFEC3990013D990 /* HomeViewController.xib in Resources */,
 				A14186D02D00CEA80023A6E5 /* BestPartnersAllViewController.xib in Resources */,
@@ -574,6 +601,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		418E01AD37B31D62757BD1FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bankezy/Pods-Bankezy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bankezy/Pods-Bankezy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bankezy/Pods-Bankezy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		79CDED45FD048F0DB2692F25 /* [CP] Embed Pods Frameworks */ = {
@@ -610,6 +654,7 @@
 				A1DD79B82D1D4E4400C601B7 /* OrderTableViewCell.swift in Sources */,
 				A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */,
 				A1145BF52D0C2E9E005DED95 /* DetailBrandViewModel.swift in Sources */,
+				A1DD79D62D23AFDA00C601B7 /* DeliveryOnGoingViewController.swift in Sources */,
 				A19E16842D1D35C900E0B856 /* ConfirmOrderViewController.swift in Sources */,
 				A14186D22D00D06B0023A6E5 /* BestPartnerAllViewModel.swift in Sources */,
 				A137F9E92CF5C38100A75DA3 /* APITarget.swift in Sources */,
@@ -644,6 +689,7 @@
 				A137F9EB2CF6E84000A75DA3 /* LoginViewModel.swift in Sources */,
 				A14599782CF840500013D990 /* TabBarController.swift in Sources */,
 				A19E16792D15641600E0B856 /* dishImageCollectionViewCell.swift in Sources */,
+				A1DD79DB2D266B1700C601B7 /* DeliveryStatusViewModel.swift in Sources */,
 				A137F9BC2CF38E6800A75DA3 /* NavigationBar.swift in Sources */,
 				A19455772D06EE11008721E9 /* SearchTableViewCell.swift in Sources */,
 				A194557B2D095C31008721E9 /* SearchResultViewController.swift in Sources */,

@@ -29,7 +29,8 @@ class TabBarController: UITabBarController {
         firstVC.tabBarItem.tag = 0
         let homeNavi = UINavigationController(rootViewController: firstVC)
         
-        let secondVC = HomeViewController(viewModel: viewModel)
+        let viewModel2 = DeliveryStatusViewModel()
+        let secondVC = DeliveryOnGoingViewController(viewModel: viewModel2)
         secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "compass"), tag: 1)
         let compassNavi = UINavigationController(rootViewController: secondVC)
         

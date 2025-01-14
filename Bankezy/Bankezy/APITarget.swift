@@ -28,6 +28,8 @@ enum APITarget: TargetType {
     case addToCart(id: String?, size: String?, qty: String?)
     case orderItemsInfor
     case addPaymentMethod(cardNumber: String?, expireDate: String?, cvcNumber: String?)
+    case getDeliveryStatus
+    case confirmOrder(orderInfor: OrderRequest)
     
     var baseURL: URL {
         return URL(string: "https://f3fb93b6-d607-4da3-abeb-2312a3ab8bff.mock.pstmn.io")!
@@ -71,14 +73,18 @@ enum APITarget: TargetType {
             return "/confirmOrder"
         case .addPaymentMethod:
             return "/addPaymentMethod"
+        case .getDeliveryStatus:
+            return "/DeliveryStatus"
+        case .confirmOrder(orderInfor: let orderInfor):
+            return "/submitOrder"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .creatAcc, .login, .addToCart, .addPaymentMethod:
+        case .creatAcc, .login, .addToCart, .addPaymentMethod, .confirmOrder:
             return .post
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor, .getDeliveryStatus:
             return .get
         }
     }
@@ -93,7 +99,7 @@ enum APITarget: TargetType {
             return .requestParameters(parameters: ["email": email,
                                                    "password": password,
                                                    "autoLogin": autoLogin], encoding: JSONEncoding.default)
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor, .getDeliveryStatus:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
             
         case .addToCart(let id, let size, let qty):
@@ -106,6 +112,8 @@ enum APITarget: TargetType {
                               "expireDate": expireDate ?? "",
                               "cvcNumber": cvcNumber ?? ""
                             ], encoding: JSONEncoding.default)
+        case .confirmOrder(let orderInfor):
+            return .requestParameters(parameters: ["orderInfor": orderInfor], encoding: JSONEncoding.default)
         }
     }
     

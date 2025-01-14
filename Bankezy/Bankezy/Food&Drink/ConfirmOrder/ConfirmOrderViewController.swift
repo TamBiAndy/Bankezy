@@ -45,9 +45,12 @@ class ConfirmOrderViewController: UIViewController {
     
     @IBOutlet weak var btnSubmit: UIButton!
     
+    @IBOutlet weak var cashView: UIView!
+    
     
     //MARK: Variables
     var viewModel: ConfirmOrderViewModel
+    let itemChanged = PublishSubject<OrderInforResponse.Item>()
     
     //MARK: Initializers
     init(viewModel: ConfirmOrderViewModel) {
@@ -69,7 +72,17 @@ class ConfirmOrderViewController: UIViewController {
     //MARK: Private func
     
     func bindData() {
-        let input = ConfirmOrderViewModel.Input(viewDidload: .just(()))
+        let paymentMethodSelected = Observable.merge(
+            paypalView.rx.tapGesture().mapTo(PaymentMethod.creditCard),
+            cashView.rx.tapGesture().mapTo(PaymentMethod.cash)
+        ).startWith(PaymentMethod.cash)
+        
+        let input = ConfirmOrderViewModel.Input(
+            viewDidload: .just(()),
+            submitTapped: btnSubmit.rx.tap.asObservable(),
+            paymentMethod: paymentMethodSelected,
+            itemChanged: itemChanged.asObservable()
+        )
         let output = viewModel.transform(input: input)
         
         output.orderInfor
@@ -100,8 +113,10 @@ class ConfirmOrderViewController: UIViewController {
         output.orderInfor
             .compactMap(\.items)
             .drive(onNext: { items in
-                items.forEach { item in
-                    self.setupItemView(item: item)
+                if self.itemsVstack.arrangedSubviews.isEmpty {
+                    items.forEach { item in
+                        self.setupItemView(item: item)
+                    }
                 }
             })
             .disposed(by: rx.disposeBag)
@@ -203,9 +218,12 @@ class ConfirmOrderViewController: UIViewController {
             })
             .disposed(by: rx.disposeBag)
         
+       
     }
     
     private func setupItemView(item: OrderInforResponse.Item) {
+        var currentItem = item
+        
         let itemView = UIView(frame: .zero)
         let contentHstack = UIStackView(frame: .zero)
             .with(\.axis, setTo: .horizontal)
@@ -251,6 +269,7 @@ class ConfirmOrderViewController: UIViewController {
         btnDown.backgroundColor = UIColor(hexString: "C1C7D0")
         btnDown.tintColor = .white
         
+        
         let btnPlus = UIButton(type: .custom)
         btnPlus.setImage(UIImage(named: "ic_plus"), for: .normal)
         btnPlus.layer.cornerRadius = 8
@@ -261,6 +280,35 @@ class ConfirmOrderViewController: UIViewController {
             .with(\.text, setTo: "\(item.quantity ?? 0)")
             .with(\.textColor, setTo: UIColor(hexString: "172B4D"))
             .with(\.font, setTo: .medium(size: 12))
+        
+        btnPlus.rx.tap
+            .map {
+                currentItem.quantity = (currentItem.quantity ?? 0) + 1
+                return currentItem
+            }
+            .bind(onNext: { item in
+                lblQty.text = "\(item.quantity ?? 0)"
+                let amount = (item.price ?? 0.0) * Double(item.quantity ?? 0)
+                lblPrice.text = "$\(amount)"
+                self.itemChanged.onNext(item)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        btnDown.rx.tap
+            .map {
+                currentItem.quantity = max(((currentItem.quantity ?? 0) - 1), 0)
+                
+                return currentItem
+            }
+            .bind(onNext: { item in
+                lblQty.text = "\(item.quantity ?? 0)"
+                let amount = (item.price ?? 0.0) * Double(item.quantity ?? 0)
+                lblPrice.text = "$\(amount)"
+                self.itemChanged.onNext(item)
+            })
+            .disposed(by: rx.disposeBag)
+        
+       
         
         dishImage.kf.setImage(with: URL(string: item.image ?? ""))
         

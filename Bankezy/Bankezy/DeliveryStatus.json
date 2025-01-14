@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "message": "Delivery details fetched successfully",
+  "data": {
+    "orderId": "12345",
+    "orderStatus": "on_the_way",
+    "startTime": "2025-01-02T15:00:00Z",
+    "deliveryTimeEstimate": "2025-01-02T15:30:00Z",
+    "pickupLocation": {
+      "latitude": 20.99118965058385,
+      "longitude": 105.94381721360377,
+      "address": "S2.15 Ocean Park"
+    },
+    "deliveryLocation": {
+      "latitude": 20.99744302805133,
+      "longitude": 105.94928220546161,
+      "address": "Ngoc Trai 18"
+    },
+    "currentDriverLocation": {
+      "latitude": 20.993269638005266,
+      "longitude": 105.94571184206404,
+      "lastUpdated": "2025-01-02T15:15:00Z"
+    },
+    "driverInfo": {
+      "name": "Philippe Troussier",
+      "phone": "+145425765",
+      "vehicle": "Toyota Prius - White",
+      "profilePicture": "https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "iconGoing": "https://images.pexels.com/photos/6194157/pexels-photo-6194157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  }
+}

@@ -22,6 +22,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmOrderViewController" customModule="Bankezy" customModuleProvider="target">
             <connections>
                 <outlet property="btnSubmit" destination="sod-nW-ygl" id="D3o-YI-dDU"/>
+                <outlet property="cashView" destination="msj-4l-mGU" id="6gw-2c-Jgg"/>
                 <outlet property="itemsVstack" destination="lJl-Mg-f3J" id="On2-PI-UNO"/>
                 <outlet property="lblAddress" destination="kMV-xW-Nba" id="t1X-X4-pyK"/>
                 <outlet property="lblBrand" destination="65c-EW-uE0" id="Ytm-vv-NrT"/>
@@ -57,7 +58,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="363" height="230"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzZ-Hc-53U">
-                                                    <rect key="frame" x="20" y="20" width="84.666666666666671" height="69"/>
+                                                    <rect key="frame" x="20" y="20" width="75.666666666666671" height="69"/>
                                                     <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="16"/>
                                                     <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -88,13 +89,13 @@
                                                             <rect key="frame" x="93" y="0.0" width="230" height="80"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2X-Y4-tsg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="15.666666666666666"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="14"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="12"/>
                                                                     <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMV-xW-Nba">
-                                                                    <rect key="frame" x="0.0" y="17.666666666666661" width="230" height="36.333333333333343"/>
+                                                                    <rect key="frame" x="0.0" y="16" width="230" height="38"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="12"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -144,13 +145,13 @@
                                             <rect key="frame" x="0.0" y="245" width="363" height="434"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65c-EW-uE0">
-                                                    <rect key="frame" x="20" y="20" width="43" height="21"/>
+                                                    <rect key="frame" x="20.000000000000004" y="20" width="39.333333333333343" height="29.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="16"/>
                                                     <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wq-Vd-8K7">
-                                                    <rect key="frame" x="0.0" y="221" width="363" height="1"/>
+                                                    <rect key="frame" x="0.0" y="229.33333333333337" width="363" height="1"/>
                                                     <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="rnw-BR-uyF"/>
@@ -158,19 +159,19 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="b1E-nD-sMG">
-                                                    <rect key="frame" x="20" y="239" width="323" height="175"/>
+                                                    <rect key="frame" x="20" y="247.33333333333337" width="323" height="166.66666666666663"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2k-3H-uhj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="18.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="323" height="16.333333333333332"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANo-2F-kRv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-Pp-9W0">
-                                                                    <rect key="frame" x="288" y="0.0" width="35" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="288.66666666666669" y="0.0" width="34.333333333333314" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -178,23 +179,23 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKY-D3-M2e">
-                                                            <rect key="frame" x="0.0" y="34.333333333333371" width="323" height="1"/>
+                                                            <rect key="frame" x="0.0" y="32.333333333333258" width="323" height="1"/>
                                                             <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="wm9-1h-1st"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oY0-P9-chS">
-                                                            <rect key="frame" x="0.0" y="51.333333333333371" width="323" height="18.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="49.333333333333258" width="323" height="16.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrG-Rz-z76">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF9-jn-ZTg">
-                                                                    <rect key="frame" x="288" y="0.0" width="35" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="288.66666666666669" y="0.0" width="34.333333333333314" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -202,23 +203,23 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19T-h2-rqN">
-                                                            <rect key="frame" x="0.0" y="85.666666666666629" width="323" height="1"/>
+                                                            <rect key="frame" x="0.0" y="81.666666666666629" width="323" height="1"/>
                                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="9G4-ES-mvH"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJe-vI-JjI">
-                                                            <rect key="frame" x="0.0" y="102.66666666666663" width="323" height="18.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="98.666666666666629" width="323" height="16.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voucher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acN-ej-oXg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-qa-Fgv">
-                                                                    <rect key="frame" x="288" y="0.0" width="35" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="288.66666666666669" y="0.0" width="34.333333333333314" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -226,23 +227,23 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rt9-MQ-o3l">
-                                                            <rect key="frame" x="0.0" y="137" width="323" height="1"/>
+                                                            <rect key="frame" x="0.0" y="131" width="323" height="1"/>
                                                             <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="NRw-eY-gND"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjd-ml-a8Q">
-                                                            <rect key="frame" x="0.0" y="154" width="323" height="21"/>
+                                                            <rect key="frame" x="0.0" y="148" width="323" height="18.666666666666657"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-oT-22K">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="283.66666666666669" height="18.666666666666668"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="16"/>
                                                                     <color key="textColor" red="0.090196078430000007" green="0.16862745100000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwf-CO-pTG">
-                                                                    <rect key="frame" x="282" y="0.0" width="41" height="21"/>
+                                                                    <rect key="frame" x="283.66666666666669" y="0.0" width="39.333333333333314" height="18.666666666666668"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="16"/>
                                                                     <color key="textColor" red="0.93725490196078431" green="0.62352941176470589" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -252,7 +253,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lJl-Mg-f3J">
-                                                    <rect key="frame" x="0.0" y="62" width="363" height="159"/>
+                                                    <rect key="frame" x="0.0" y="70.333333333333314" width="363" height="159"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="159" placeholder="YES" id="lRb-6I-tYC"/>
                                                     </constraints>
@@ -351,16 +352,16 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gjg-PU-1jz">
-                                                            <rect key="frame" x="52" y="21" width="37.333333333333343" height="34"/>
+                                                            <rect key="frame" x="52" y="23" width="36.666666666666657" height="30.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7R6-9D-LRp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.93725490196078431" green="0.62352941176470589" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paypal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abO-HY-Of0">
-                                                                    <rect key="frame" x="0.0" y="18.333333333333371" width="37.333333333333336" height="15.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="16.333333333333371" width="36.666666666666664" height="14"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="12"/>
                                                                     <color key="textColor" red="0.93725490196078431" green="0.62352941176470589" blue="0.15294117647058825" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -393,16 +394,16 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sWA-fb-DR3">
-                                                            <rect key="frame" x="52" y="21" width="35.666666666666657" height="34"/>
+                                                            <rect key="frame" x="52" y="23" width="34.333333333333343" height="30.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp2-z6-vdd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="35.666666666666664" height="18.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="16.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                                                     <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6I-wI-gdI">
-                                                                    <rect key="frame" x="0.0" y="18.333333333333371" width="35.666666666666664" height="15.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="16.333333333333371" width="34.333333333333336" height="14"/>
                                                                     <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="12"/>
                                                                     <color key="textColor" red="0.47843137254901957" green="0.52549019607843139" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>

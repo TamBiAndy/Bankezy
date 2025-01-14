@@ -20,5 +20,6 @@ target 'Bankezy' do
   pod 'PanModal'
   pod 'FloatingPanel'
   pod 'RxDataSources', '~> 5.0'
+  pod 'Starscream', '~> 4.0.6'
   
 end

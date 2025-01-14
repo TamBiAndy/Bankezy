@@ -12,5 +12,7 @@
 		<string>DMSans-SemiBold.ttf</string>
 		<string>DMSans-Thin.ttf</string>
 	</array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location to track the delivery</string>
 </dict>
 </plist>
