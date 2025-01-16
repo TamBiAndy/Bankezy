@@ -30,6 +30,8 @@ enum APITarget: TargetType {
     case addPaymentMethod(cardNumber: String?, expireDate: String?, cvcNumber: String?)
     case getDeliveryStatus
     case confirmOrder(orderInfor: OrderRequest)
+    case getHistoryOrder
+    case getOngoingList
     
     var baseURL: URL {
         return URL(string: "https://f3fb93b6-d607-4da3-abeb-2312a3ab8bff.mock.pstmn.io")!
@@ -77,6 +79,10 @@ enum APITarget: TargetType {
             return "/DeliveryStatus"
         case .confirmOrder(orderInfor: let orderInfor):
             return "/submitOrder"
+        case .getHistoryOrder:
+            return "/historyOrder"
+        case .getOngoingList:
+            return "/onGoingList"
         }
     }
     
@@ -84,7 +90,7 @@ enum APITarget: TargetType {
         switch self {
         case .creatAcc, .login, .addToCart, .addPaymentMethod, .confirmOrder:
             return .post
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor, .getDeliveryStatus:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor, .getDeliveryStatus, .getHistoryOrder, .getOngoingList:
             return .get
         }
     }
@@ -99,7 +105,7 @@ enum APITarget: TargetType {
             return .requestParameters(parameters: ["email": email,
                                                    "password": password,
                                                    "autoLogin": autoLogin], encoding: JSONEncoding.default)
-        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor, .getDeliveryStatus:
+        case .getCategory, .getBestpartner, .getPartnerFast, .getPartnerSales, .getPartnerNearby, .getPartnerRating, .getPartnerAll, .searchPartner, .brandDetail, .popularItemsOfBrand, .getMenuOfBrand, .getReviewBrand, .getDishInfor, .orderItemsInfor, .getDeliveryStatus, .getHistoryOrder, .getOngoingList:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
             
         case .addToCart(let id, let size, let qty):

@@ -65,7 +65,7 @@ class DeliveryOnGoingViewController: UIViewController, CLLocationManagerDelegate
         
         let output = viewModel.transform(input: input)
         
-        output.location
+        output.deliveryInfor
             .drive(onNext: { location in
                 self.deliveryURL = location.data?.driverInfo?.iconGoing
                 self.addAnnotationsAndRoute(response: location)
@@ -73,33 +73,63 @@ class DeliveryOnGoingViewController: UIViewController, CLLocationManagerDelegate
             })
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
+            .compactMap(\.data)
+            .compactMap(\.items)
+            .map { items in
+                let productNames = items.compactMap { $0.productName }
+                return productNames.joined(separator: "-")
+            }
+            .drive(lblProductName.rx.text)
+            .disposed(by: rx.disposeBag)
+        
+        output.deliveryInfor
+            .compactMap(\.data)
+            .compactMap(\.finalAmount)
+            .map { "$ \($0)"}
+            .drive(lblPrice.rx.text)
+            .disposed(by: rx.disposeBag)
+        
+        output.deliveryInfor
+            .compactMap(\.data)
+            .compactMap(\.items)
+            .map { "\($0.count) items" }
+            .drive(lblItemsCount.rx.text)
+            .disposed(by: rx.disposeBag)
+        
+        output.deliveryInfor
+            .compactMap(\.data)
+            .compactMap(\.paymentMethod)
+            .drive(lblPaymentMethod.rx.text)
+            .disposed(by: rx.disposeBag)
+        
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.pickupLocation)
             .compactMap(\.address)
             .drive(lblBrandName.rx.text)
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.startTime)
             .drive(lblTimeStart.rx.text)
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.deliveryLocation)
             .compactMap(\.address)
             .drive(lblReceiveAddress.rx.text)
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.deliveryTimeEstimate)
             .drive(lblTimeRecieve.rx.text)
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.driverInfo)
             .compactMap(\.profilePicture)
@@ -109,14 +139,14 @@ class DeliveryOnGoingViewController: UIViewController, CLLocationManagerDelegate
             })
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.driverInfo)
             .compactMap(\.name)
             .drive(lblShipperName.rx.text)
             .disposed(by: rx.disposeBag)
         
-        output.location
+        output.deliveryInfor
             .compactMap(\.data)
             .compactMap(\.driverInfo)
             .compactMap(\.phone)
@@ -124,8 +154,8 @@ class DeliveryOnGoingViewController: UIViewController, CLLocationManagerDelegate
             .disposed(by: rx.disposeBag)
         
         Driver.combineLatest(
-            output.location.compactMap(\.data).compactMap(\.startTime),
-            output.location.compactMap(\.data).compactMap(\.deliveryTimeEstimate)
+            output.deliveryInfor.compactMap(\.data).compactMap(\.startTime),
+            output.deliveryInfor.compactMap(\.data).compactMap(\.deliveryTimeEstimate)
         )
         .drive(onNext: { startTime, deliveryTimeEstimate in
             let dateFormatter = DateFormatter()

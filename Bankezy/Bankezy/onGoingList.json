@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "messege": "Order history retrieved successfully",
+  "data": [
+    {
+      "orderID": "ORD001",
+      "orderDate": "2025-01-01T10:00:00Z",
+      "type": "Drink",
+      "status": "Ongoing",
+      "totalPrice": 40,
+      "image": "https://images.pexels.com/photos/16218527/pexels-photo-16218527/free-photo-of-starbucks-logo-over-cafe.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "brandName": "Starbucks",
+      "brandAddress": "8700 Beverly, CA 90048",
+      "itemsQty": 2
+    }
+  ]
+}

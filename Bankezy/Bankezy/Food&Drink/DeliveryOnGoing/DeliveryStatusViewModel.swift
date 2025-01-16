@@ -38,6 +38,13 @@ struct DeliveryStatusResponse: Codable {
     let orderStatus: String?
     let startTime: String?
     let deliveryTimeEstimate: String?
+      let brand: OrderInforResponse.Brand?
+    let items: [OrderInforResponse.Item]?
+    let totalAmount: Double?
+    let discount: Int?
+    let shippingFee: Int?
+    let finalAmount: Double?
+    let paymentMethod: String?
     let pickupLocation: Location?
     let deliveryLocation: Location?
     let currentDriverLocation: Location?
@@ -48,6 +55,13 @@ struct DeliveryStatusResponse: Codable {
       case orderStatus
       case startTime
       case deliveryTimeEstimate
+      case brand
+      case items
+      case totalAmount
+      case discount
+      case shippingFee
+      case finalAmount
+      case paymentMethod
       case pickupLocation
       case deliveryLocation
       case currentDriverLocation
@@ -64,14 +78,14 @@ class DeliveryStatusViewModel {
     let provider = MoyaProvider<APITarget>(stubClosure: MoyaProvider.delayedStub(2))
     
     func transform(input: Input) -> Output {
-        let location = input.viewDidload
+        let deliveryInforDriver = input.viewDidload
             .flatMapLatest {
                 self.provider.rx.request(.getDeliveryStatus)
                     .map(DeliveryStatusResponse.self)
             }
             .asDriver(onErrorDriveWith: .empty())
         
-        return .init(location: location)
+        return .init(deliveryInfor: deliveryInforDriver)
     }
 }
 
@@ -81,6 +95,6 @@ extension DeliveryStatusViewModel {
     }
     
     struct Output {
-        let location: Driver<DeliveryStatusResponse>
+        let deliveryInfor: Driver<DeliveryStatusResponse>
     }
 }

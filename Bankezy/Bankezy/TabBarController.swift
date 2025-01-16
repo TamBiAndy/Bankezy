@@ -34,7 +34,8 @@ class TabBarController: UITabBarController {
         secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "compass"), tag: 1)
         let compassNavi = UINavigationController(rootViewController: secondVC)
         
-        let thirdVC = HomeViewController(viewModel: viewModel)
+        let viewModel3 = HistoryOrderViewModel()
+        let thirdVC = HistoryOrderViewController(viewModel: viewModel3)
         thirdVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "receipt"), selectedImage: UIImage(named: "receiptSelect"))
         thirdVC.tabBarItem.tag = 2
         let receiptNavi = UINavigationController(rootViewController: thirdVC)

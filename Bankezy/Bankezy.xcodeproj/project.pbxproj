@@ -110,6 +110,13 @@
 		A1DD79D92D26698100C601B7 /* DeliveryStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79D82D26698100C601B7 /* DeliveryStatus.json */; };
 		A1DD79DB2D266B1700C601B7 /* DeliveryStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79DA2D266B1700C601B7 /* DeliveryStatusViewModel.swift */; };
 		A1DD79DF2D34E98C00C601B7 /* submitOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79DE2D34E98C00C601B7 /* submitOrder.json */; };
+		A1DD79E32D3633B700C601B7 /* HistoryOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79E12D3633B700C601B7 /* HistoryOrderViewController.swift */; };
+		A1DD79E42D3633B700C601B7 /* HistoryOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79E22D3633B700C601B7 /* HistoryOrderViewController.xib */; };
+		A1DD79E62D363D3B00C601B7 /* HistoryOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79E52D363D3B00C601B7 /* HistoryOrderViewModel.swift */; };
+		A1DD79E92D36C45300C601B7 /* HistoryOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD79E72D36C45300C601B7 /* HistoryOrderTableViewCell.swift */; };
+		A1DD79EA2D36C45300C601B7 /* HistoryOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79E82D36C45300C601B7 /* HistoryOrderTableViewCell.xib */; };
+		A1DD79EC2D36CE0900C601B7 /* historyOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79EB2D36CE0900C601B7 /* historyOrder.json */; };
+		A1DD79EE2D37615D00C601B7 /* onGoingList.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DD79ED2D37615D00C601B7 /* onGoingList.json */; };
 		BCF0571C5F1AAA0468E96238 /* Pods_Bankezy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC0476FA2BA16CE09A8FF9 /* Pods_Bankezy.framework */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +229,13 @@
 		A1DD79D82D26698100C601B7 /* DeliveryStatus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeliveryStatus.json; sourceTree = "<group>"; };
 		A1DD79DA2D266B1700C601B7 /* DeliveryStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryStatusViewModel.swift; sourceTree = "<group>"; };
 		A1DD79DE2D34E98C00C601B7 /* submitOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = submitOrder.json; sourceTree = "<group>"; };
+		A1DD79E12D3633B700C601B7 /* HistoryOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderViewController.swift; sourceTree = "<group>"; };
+		A1DD79E22D3633B700C601B7 /* HistoryOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryOrderViewController.xib; sourceTree = "<group>"; };
+		A1DD79E52D363D3B00C601B7 /* HistoryOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderViewModel.swift; sourceTree = "<group>"; };
+		A1DD79E72D36C45300C601B7 /* HistoryOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A1DD79E82D36C45300C601B7 /* HistoryOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryOrderTableViewCell.xib; sourceTree = "<group>"; };
+		A1DD79EB2D36CE0900C601B7 /* historyOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = historyOrder.json; sourceTree = "<group>"; };
+		A1DD79ED2D37615D00C601B7 /* onGoingList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = onGoingList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +295,8 @@
 				A1DD79BE2D1D54A700C601B7 /* confirmOrder.json */,
 				A1DD79D82D26698100C601B7 /* DeliveryStatus.json */,
 				A1DD79DE2D34E98C00C601B7 /* submitOrder.json */,
+				A1DD79EB2D36CE0900C601B7 /* historyOrder.json */,
+				A1DD79ED2D37615D00C601B7 /* onGoingList.json */,
 				A137F9982CF38CC800A75DA3 /* AppDelegate.swift */,
 				A11FEE8F2CFF64720039400C /* CategoryCollectionViewCell.swift */,
 				A14599762CF840500013D990 /* TabBarController.swift */,
@@ -352,6 +368,7 @@
 				A19E166E2D15587500E0B856 /* AddToCart */,
 				A19E16812D1D358E00E0B856 /* ConfirmOrder */,
 				A1DD79D32D23AFB200C601B7 /* DeliveryOnGoing */,
+				A1DD79E02D36338F00C601B7 /* HistoryOrder */,
 			);
 			path = "Food&Drink";
 			sourceTree = "<group>";
@@ -454,6 +471,18 @@
 			path = DeliveryOnGoing;
 			sourceTree = "<group>";
 		};
+		A1DD79E02D36338F00C601B7 /* HistoryOrder */ = {
+			isa = PBXGroup;
+			children = (
+				A1DD79E12D3633B700C601B7 /* HistoryOrderViewController.swift */,
+				A1DD79E52D363D3B00C601B7 /* HistoryOrderViewModel.swift */,
+				A1DD79E22D3633B700C601B7 /* HistoryOrderViewController.xib */,
+				A1DD79E72D36C45300C601B7 /* HistoryOrderTableViewCell.swift */,
+				A1DD79E82D36C45300C601B7 /* HistoryOrderTableViewCell.xib */,
+			);
+			path = HistoryOrder;
+			sourceTree = "<group>";
+		};
 		D16F85C9451A177F71ABB67F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,7 +552,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DD79EE2D37615D00C601B7 /* onGoingList.json in Resources */,
 				A1DD79D92D26698100C601B7 /* DeliveryStatus.json in Resources */,
+				A1DD79EA2D36C45300C601B7 /* HistoryOrderTableViewCell.xib in Resources */,
 				A1145BF32D0C1999005DED95 /* MenuTableViewCell.xib in Resources */,
 				A1DD79D12D23139100C601B7 /* DMSans-Thin.ttf in Resources */,
 				A1DD79CF2D23139100C601B7 /* DMSans-Bold.ttf in Resources */,
@@ -536,6 +567,7 @@
 				A1DD79B92D1D4E4400C601B7 /* OrderTableViewCell.xib in Resources */,
 				A13FACEC2CFF6BB700AC23FA /* category.json in Resources */,
 				A19E16852D1D35C900E0B856 /* ConfirmOrderViewController.xib in Resources */,
+				A1DD79EC2D36CE0900C601B7 /* historyOrder.json in Resources */,
 				A137F9DB2CF5929300A75DA3 /* CreatAccViewController.xib in Resources */,
 				A1DD79D02D23139100C601B7 /* DMSans-Italic.ttf in Resources */,
 				A1DD79BF2D1D54A700C601B7 /* confirmOrder.json in Resources */,
@@ -575,6 +607,7 @@
 				A14186D02D00CEA80023A6E5 /* BestPartnersAllViewController.xib in Resources */,
 				A14186D42D0211610023A6E5 /* seeAllPartner.json in Resources */,
 				A19455802D097E45008721E9 /* searchPartner.json in Resources */,
+				A1DD79E42D3633B700C601B7 /* HistoryOrderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +686,7 @@
 				A1DD79BB2D1D532A00C601B7 /* ConfirmOrderViewModel.swift in Sources */,
 				A1DD79B82D1D4E4400C601B7 /* OrderTableViewCell.swift in Sources */,
 				A137F9992CF38CC800A75DA3 /* AppDelegate.swift in Sources */,
+				A1DD79E92D36C45300C601B7 /* HistoryOrderTableViewCell.swift in Sources */,
 				A1145BF52D0C2E9E005DED95 /* DetailBrandViewModel.swift in Sources */,
 				A1DD79D62D23AFDA00C601B7 /* DeliveryOnGoingViewController.swift in Sources */,
 				A19E16842D1D35C900E0B856 /* ConfirmOrderViewController.swift in Sources */,
@@ -688,9 +722,11 @@
 				A19E16612D10889200E0B856 /* ImageReviewCollectionViewCell.swift in Sources */,
 				A137F9EB2CF6E84000A75DA3 /* LoginViewModel.swift in Sources */,
 				A14599782CF840500013D990 /* TabBarController.swift in Sources */,
+				A1DD79E32D3633B700C601B7 /* HistoryOrderViewController.swift in Sources */,
 				A19E16792D15641600E0B856 /* dishImageCollectionViewCell.swift in Sources */,
 				A1DD79DB2D266B1700C601B7 /* DeliveryStatusViewModel.swift in Sources */,
 				A137F9BC2CF38E6800A75DA3 /* NavigationBar.swift in Sources */,
+				A1DD79E62D363D3B00C601B7 /* HistoryOrderViewModel.swift in Sources */,
 				A19455772D06EE11008721E9 /* SearchTableViewCell.swift in Sources */,
 				A194557B2D095C31008721E9 /* SearchResultViewController.swift in Sources */,
 				A137F9EF2CF781BB00A75DA3 /* ErrorTracker.swift in Sources */,

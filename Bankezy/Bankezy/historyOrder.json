@@ -1,0 +1,40 @@
+{
+  "status": "success",
+  "messege": "Order history retrieved successfully",
+  "data": [
+    {
+      "orderID": "ORD001",
+      "orderDate": "2025-01-01T10:00:00Z",
+      "type": "Drink",
+      "status": "Completed",
+      "totalPrice": 40,
+      "image": "https://images.pexels.com/photos/16218527/pexels-photo-16218527/free-photo-of-starbucks-logo-over-cafe.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "brandName": "Starbucks",
+      "brandAddress": "8700 Beverly, CA 90048",
+      "itemsQty": 2
+    },
+    {
+      "orderID": "ORD002",
+      "orderDate": "2025-01-01T10:00:00Z",
+      "type": "Food",
+      "status": "Completed",
+      "totalPrice": 40,
+      "image": "https://images.pexels.com/photos/30204389/pexels-photo-30204389/free-photo-of-delicious-cheeseburger-with-grilled-beef-and-cheese.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "brandName": "Burger King",
+      "brandAddress": "8700 Beverly, CA 90048",
+      "itemsQty": 2
+    },
+    {
+      "orderID": "ORD003",
+      "orderDate": "2025-01-01T10:00:00Z",
+      "type": "Food",
+      "status": "Completed",
+      "totalPrice": 40,
+      "image": "https://images.pexels.com/photos/27795224/pexels-photo-27795224/free-photo-of-kfc-logo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "brandName": "KFC",
+      "brandAddress": "8700 Beverly, CA 90048",
+      "itemsQty": 2
+    }
+  ]
+}
+        

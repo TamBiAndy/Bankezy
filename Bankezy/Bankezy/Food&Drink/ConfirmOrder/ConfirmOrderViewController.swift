@@ -182,39 +182,49 @@ class ConfirmOrderViewController: UIViewController {
             })
             .disposed(by: rx.disposeBag)
         
-        btnSubmit.rx.tap
-            .bind(onNext: {
-                let iconImg = ResultStatus.IconInfor(
-                    image: UIImage(named: "check-circle-fill"),
-                    width: 40,
-                    height: 40)
-                let title = ResultStatus.Label(
-                    title: "You ordered successfully",
-                    font: .medium(size: 16),
-                    color: UIColor(hexString: "172B4D"))
-                
-                let descript = ResultStatus.Label(
-                    title: "You successfully place an order, your order is confirmed and delivered within 20 minutes. Wish you enjoy the food",
-                    font: .medium(size: 12),
-                    color: UIColor(hexString: "7A869A"))
-                
-                let button = ResultStatus.ButtonInfo(
-                    title: "KEEP BROWSING",
-                    titleColor: UIColor(hexString: "EF9F27"),
-                    backgroundColor: .clear,
-                    titleFont: .bold(size: 14),
-                    action: {
-                        print("KEEP BROWSING TAPPED")
-                        self.dismiss(animated: true)
-                    })
-                
-                let resultStatus = ResultStatus(
-                    iconImg: iconImg,
-                    title: title,
-                    desciption: descript,
-                    buttons: [button])
-                
-                self.showResultStatus(resultStatus)
+        output.isSuccess
+            .drive(onNext: { isSuccess in
+                if isSuccess {
+                    let iconImg = ResultStatus.IconInfor(
+                        image: UIImage(named: "check-circle-fill"),
+                        width: 40,
+                        height: 40)
+                    let title = ResultStatus.Label(
+                        title: "You ordered successfully",
+                        font: .medium(size: 16),
+                        color: UIColor(hexString: "172B4D"))
+                    
+                    let descript = ResultStatus.Label(
+                        title: "You successfully place an order, your order is confirmed and delivered within 20 minutes. Wish you enjoy the food",
+                        font: .medium(size: 12),
+                        color: UIColor(hexString: "7A869A"))
+                    
+                    let button = ResultStatus.ButtonInfo(
+                        title: "KEEP BROWSING",
+                        titleColor: UIColor(hexString: "EF9F27"),
+                        backgroundColor: .clear,
+                        titleFont: .bold(size: 14),
+                        action: {
+                            print("KEEP BROWSING TAPPED")
+                            self.dismiss(animated: true)
+                        })
+                    
+                    let resultStatus = ResultStatus(
+                        iconImg: iconImg,
+                        title: title,
+                        desciption: descript,
+                        buttons: [button])
+                    
+                    self.showResultStatus(resultStatus)
+                } else {
+                    
+                }
+            })
+            .disposed(by: rx.disposeBag)
+        
+        output.error
+            .drive(onNext: { error in
+                print(error.localizedDescription)
             })
             .disposed(by: rx.disposeBag)
         
